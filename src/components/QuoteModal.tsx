@@ -39,7 +39,9 @@ export const QuoteModalProvider = ({ children }: { children: ReactNode }) => {
         className="fixed inset-0 z-[100]"
         style={{
           pointerEvents: isOpen ? "auto" : "none",
+          opacity: isOpen ? 1 : 0,
           visibility: isOpen ? "visible" : "hidden",
+          transition: "opacity 0.25s ease, visibility 0.25s ease",
         }}
       >
         <AnimatePresence>
@@ -63,10 +65,6 @@ export const QuoteModalProvider = ({ children }: { children: ReactNode }) => {
             className="relative rounded-2xl border-2 border-secondary shadow-2xl w-full max-w-lg max-h-[90vh] overflow-hidden"
             style={{
               backgroundColor: "#0f172a",
-              transform: isOpen ? "scale(1)" : "scale(0.95)",
-              opacity: isOpen ? 1 : 0,
-              transition: "transform 0.25s ease, opacity 0.25s ease",
-              pointerEvents: isOpen ? "auto" : "none",
             }}
           >
             {isOpen && (
