@@ -47,7 +47,7 @@ const Header = () => {
         {/* Logo */}
         <a href="#" className="flex items-center gap-3">
           <img src={icon} alt="Emmons Air icon" className="w-10 h-10 lg:hidden" />
-          <img src={logo} alt="Emmons Air" className="hidden lg:block h-14" />
+          <img src={logo} alt="Emmons Air" className="hidden lg:block" style={{ width: "330px", height: "167px" }} />
         </a>
 
         {/* Desktop Nav */}
