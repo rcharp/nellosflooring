@@ -3,6 +3,10 @@ import { Star } from "lucide-react";
 import { motion } from "framer-motion";
 import { useQuoteModal } from "./QuoteModal";
 import heroBg from "@/assets/hero-bg.png";
+import reviewerImg1 from "@/assets/gallery/owner-selfie.jpg";
+import reviewerImg2 from "@/assets/gallery/emmons-family.png";
+import reviewerImg3 from "@/assets/gallery/owner-thumbsup.jpg";
+import reviewerImg4 from "@/assets/gallery/event-booth.png";
 
 const HeroSection = () => {
   const { openQuoteModal } = useQuoteModal();
@@ -64,13 +68,13 @@ const HeroSection = () => {
               className="flex items-center gap-3"
             >
               <div className="flex -space-x-2">
-                {["M", "J", "J", "K"].map((initial, i) => (
-                  <div
+                {[reviewerImg1, reviewerImg2, reviewerImg3, reviewerImg4].map((img, i) => (
+                  <img
                     key={i}
-                    className="w-9 h-9 rounded-full bg-secondary/20 border-2 border-primary flex items-center justify-center text-xs font-bold text-secondary"
-                  >
-                    {initial}
-                  </div>
+                    src={img}
+                    alt="Happy customer"
+                    className="w-9 h-9 rounded-full border-2 border-primary object-cover"
+                  />
                 ))}
               </div>
               <div className="flex flex-col">
