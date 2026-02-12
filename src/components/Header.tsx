@@ -113,7 +113,7 @@ const Header = () => {
           </a>
           <button
             onClick={openQuoteModal}
-            className="px-4 lg:px-6 py-2 lg:py-2.5 text-sm font-semibold hover:opacity-90 transition-opacity"
+            className="px-3 lg:px-5 py-2 lg:py-2.5 text-sm lg:text-base font-semibold hover:opacity-90 transition-opacity"
             style={{ backgroundColor: "#f59e0b", color: "#fff", borderRadius: "10px" }}
           >
             Get Free Quote
