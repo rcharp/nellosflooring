@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Phone, Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useQuoteModal } from "./QuoteModal";
 
 const navLinks = [
   { label: "Home", href: "#" },
@@ -28,6 +29,7 @@ const navLinks = [
     children: [
       { label: "About Us", href: "#about" },
       { label: "Get In Contact", href: "#contact" },
+      { label: "Review Us", href: "/review" },
     ],
   },
 ];
@@ -35,6 +37,7 @@ const navLinks = [
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const { openQuoteModal } = useQuoteModal();
 
   return (
     <header className="sticky top-0 z-50 bg-card/80 backdrop-blur-lg border-b border-border">
@@ -107,12 +110,12 @@ const Header = () => {
             <Phone className="w-4 h-4" />
             (941) 258-4006
           </a>
-          <a
-            href="#contact"
+          <button
+            onClick={openQuoteModal}
             className="px-6 py-2.5 bg-primary text-primary-foreground text-sm font-semibold rounded-full hover:opacity-90 transition-opacity"
           >
             Get Free Quote
-          </a>
+          </button>
         </div>
 
         {/* Mobile Toggle */}
@@ -164,9 +167,12 @@ const Header = () => {
                 <a href="tel:+19412584006" className="flex items-center gap-2 text-sm font-medium text-foreground">
                   <Phone className="w-4 h-4" /> (941) 258-4006
                 </a>
-                <a href="#contact" className="block w-full text-center px-6 py-3 bg-primary text-primary-foreground text-sm font-semibold rounded-full">
+                <button
+                  onClick={() => { setMobileOpen(false); openQuoteModal(); }}
+                  className="block w-full text-center px-6 py-3 bg-primary text-primary-foreground text-sm font-semibold rounded-full"
+                >
                   Get Free Quote
-                </a>
+                </button>
               </div>
             </div>
           </motion.div>

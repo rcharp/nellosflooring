@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { ArrowRight, Star } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useQuoteModal } from "./QuoteModal";
 import heroHvac from "@/assets/hero-hvac.jpg";
 import heroRepair from "@/assets/hero-ac-repair.jpg";
 import heroInstall from "@/assets/hero-ac-install.jpg";
@@ -9,6 +10,7 @@ const images = [heroHvac, heroRepair, heroInstall];
 
 const HeroSection = () => {
   const [currentImage, setCurrentImage] = useState(0);
+  const { openQuoteModal } = useQuoteModal();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -80,13 +82,13 @@ const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <a
-                href="#contact"
+              <button
+                onClick={openQuoteModal}
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-full hover:opacity-90 transition-opacity text-base"
               >
                 Get Free Quote
                 <ArrowRight className="w-5 h-5" />
-              </a>
+              </button>
               <a
                 href="tel:+19412584006"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-card text-foreground font-semibold rounded-full border border-border hover:bg-secondary transition-colors text-base"

@@ -32,6 +32,7 @@ const Footer = () => (
             <a href="#" className="block text-sm opacity-80 hover:opacity-100 transition-opacity">Home</a>
             <a href="#about" className="block text-sm opacity-80 hover:opacity-100 transition-opacity">About Us</a>
             <a href="#contact" className="block text-sm opacity-80 hover:opacity-100 transition-opacity">Contact</a>
+            <a href="/review" className="block text-sm opacity-80 hover:opacity-100 transition-opacity">Review Us</a>
           </nav>
         </div>
 
