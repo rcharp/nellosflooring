@@ -34,14 +34,20 @@ export const QuoteModalProvider = ({ children }: { children: ReactNode }) => {
     <QuoteModalContext.Provider value={{ openQuoteModal, closeQuoteModal }}>
       {children}
 
-      {/* Iframe is ALWAYS mounted - hidden offscreen when modal is closed, visible when open */}
+      {/* 
+        Iframe is ALWAYS mounted to prevent white flash.
+        When closed: positioned off-screen so iframe stays loaded but can't intercept events.
+        When open: positioned on-screen as a modal overlay.
+      */}
       <div
-        className="fixed inset-0 z-[100]"
+        className="fixed z-[100]"
         style={{
-          pointerEvents: isOpen ? "auto" : "none",
-          opacity: isOpen ? 1 : 0,
-          visibility: isOpen ? "visible" : "hidden",
-          transition: "opacity 0.25s ease, visibility 0.25s ease",
+          top: isOpen ? 0 : 0,
+          left: isOpen ? 0 : "-200vw",
+          right: isOpen ? 0 : "auto",
+          bottom: isOpen ? 0 : "auto",
+          width: isOpen ? "100%" : "100%",
+          height: isOpen ? "100%" : "100%",
         }}
       >
         <AnimatePresence>
@@ -59,12 +65,17 @@ export const QuoteModalProvider = ({ children }: { children: ReactNode }) => {
 
         <div
           className="absolute inset-0 flex items-center justify-center p-4"
+          onClick={isOpen ? closeQuoteModal : undefined}
           style={{ pointerEvents: isOpen ? "auto" : "none" }}
         >
           <div
             className="relative rounded-2xl border-2 border-secondary shadow-2xl w-full max-w-lg max-h-[90vh] overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
             style={{
               backgroundColor: "#0f172a",
+              transform: isOpen ? "scale(1)" : "scale(0.95)",
+              opacity: isOpen ? 1 : 0,
+              transition: "transform 0.25s ease, opacity 0.25s ease",
             }}
           >
             {isOpen && (
