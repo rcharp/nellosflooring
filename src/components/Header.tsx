@@ -100,30 +100,30 @@ const Header = () => {
           )}
         </nav>
 
-        {/* CTA */}
-        <div className="hidden lg:flex items-center gap-3">
+        {/* CTA - always visible */}
+        <div className="flex items-center gap-2 lg:gap-3">
           <a
             href="tel:+19412584006"
-            className="flex items-center gap-2 px-5 py-2.5 text-base font-semibold text-secondary border border-secondary rounded-full hover:bg-secondary/10 transition-colors"
+            className="flex items-center gap-1.5 lg:gap-2 px-3 lg:px-5 py-2 lg:py-2.5 text-sm lg:text-base font-semibold text-secondary border border-secondary rounded-full hover:bg-secondary/10 transition-colors"
           >
-            <Phone className="w-5 h-5" />
-            (941) 258-4006
+            <Phone className="w-4 h-4 lg:w-5 lg:h-5" />
+            <span className="hidden sm:inline">(941) 258-4006</span>
           </a>
           <button
             onClick={openQuoteModal}
-            className="px-6 py-2.5 bg-secondary text-secondary-foreground text-sm font-semibold rounded-full hover:opacity-90 transition-opacity"
+            className="px-4 lg:px-6 py-2 lg:py-2.5 bg-secondary text-secondary-foreground text-sm font-semibold rounded-full hover:opacity-90 transition-opacity"
           >
-            Get Free Quote
+            Get Quote
+          </button>
+
+          {/* Mobile Toggle */}
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="lg:hidden p-2 text-primary-foreground"
+          >
+            {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-
-        {/* Mobile Toggle */}
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="lg:hidden p-2 text-primary-foreground"
-        >
-          {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
       </div>
 
       {/* Mobile Menu */}
