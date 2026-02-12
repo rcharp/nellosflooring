@@ -1,30 +1,27 @@
-import { useState, useEffect } from "react";
-import { ArrowRight, Star } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useEffect } from "react";
+import { Star } from "lucide-react";
+import { motion } from "framer-motion";
 import { useQuoteModal } from "./QuoteModal";
-import heroHvac from "@/assets/hero-hvac.jpg";
-import heroRepair from "@/assets/hero-ac-repair.jpg";
-import heroInstall from "@/assets/hero-ac-install.jpg";
-
-const images = [heroHvac, heroRepair, heroInstall];
 
 const HeroSection = () => {
-  const [currentImage, setCurrentImage] = useState(0);
   const { openQuoteModal } = useQuoteModal();
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % images.length);
-    }, 5000);
-    return () => clearInterval(interval);
+    const script = document.createElement("script");
+    script.src = "https://api.juniesystems.com/js/form_embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
   }, []);
 
   return (
     <section className="hero-gradient relative overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8 py-16 lg:py-24">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left Content */}
-          <div className="space-y-8">
+          <div className="space-y-8 lg:pt-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -75,33 +72,11 @@ const HeroSection = () => {
               </div>
             </motion.div>
 
-            {/* CTA */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex flex-col sm:flex-row gap-4"
-            >
-              <button
-                onClick={openQuoteModal}
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-full hover:opacity-90 transition-opacity text-base"
-              >
-                Get Free Quote
-                <ArrowRight className="w-5 h-5" />
-              </button>
-              <a
-                href="tel:+19412584006"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-card text-foreground font-semibold rounded-full border border-border hover:bg-secondary transition-colors text-base"
-              >
-                (941) 258-4006
-              </a>
-            </motion.div>
-
             {/* Review badges */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
               className="flex items-center gap-6 pt-2"
             >
               <div className="flex items-center gap-2">
@@ -123,39 +98,32 @@ const HeroSection = () => {
             </motion.div>
           </div>
 
-          {/* Right Image Carousel */}
+          {/* Right - Quote Form */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
+            id="quote-form"
+            className="rounded-2xl overflow-hidden shadow-2xl border-2"
+            style={{ backgroundColor: "#0f172a", borderColor: "#3b82f6" }}
           >
-            <div className="relative rounded-2xl overflow-hidden aspect-[4/3] shadow-2xl">
-              <AnimatePresence mode="wait">
-                <motion.img
-                  key={currentImage}
-                  src={images[currentImage]}
-                  alt="HVAC service"
-                  initial={{ opacity: 0, scale: 1.05 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{ duration: 0.5 }}
-                  className="w-full h-full object-cover"
-                />
-              </AnimatePresence>
-            </div>
-            {/* Dots */}
-            <div className="flex justify-center gap-2 mt-4">
-              {images.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setCurrentImage(i)}
-                  className={`h-2 rounded-full transition-all ${
-                    i === currentImage ? "w-8 bg-primary" : "w-2 bg-border"
-                  }`}
-                />
-              ))}
-            </div>
+            <iframe
+              src="https://api.juniesystems.com/widget/form/P2loR2dW6LgPnGhKf4Px"
+              style={{ width: "100%", height: "883px", border: "none", borderRadius: "10px" }}
+              id="inline-P2loR2dW6LgPnGhKf4Px"
+              data-layout="{'id':'INLINE'}"
+              data-trigger-type="alwaysShow"
+              data-trigger-value=""
+              data-activation-type="alwaysActivated"
+              data-activation-value=""
+              data-deactivation-type="neverDeactivate"
+              data-deactivation-value=""
+              data-form-name="Get A Quote Form"
+              data-height="883"
+              data-layout-iframe-id="inline-P2loR2dW6LgPnGhKf4Px"
+              data-form-id="P2loR2dW6LgPnGhKf4Px"
+              title="Get A Quote Form"
+            />
           </motion.div>
         </div>
       </div>
