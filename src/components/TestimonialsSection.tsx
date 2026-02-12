@@ -73,9 +73,9 @@ const TestimonialsSection = () => {
           <div className="overflow-hidden">
             <motion.div
               key={current}
-              initial={{ opacity: 0, x: 60 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -60 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.4 }}
               className="bg-card rounded-2xl p-10 card-elevated border border-border relative"
             >
