@@ -65,7 +65,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="flex items-center gap-3"
+              className="flex flex-wrap items-center gap-3"
             >
               <div className="flex -space-x-2">
                 {[reviewerImg1, reviewerImg2, reviewerImg3, reviewerImg4].map((img, i) => (
@@ -77,7 +77,7 @@ const HeroSection = () => {
                   />
                 ))}
               </div>
-              <div className="flex flex-col">
+              <div className="flex items-center gap-2">
                 <div className="flex items-center gap-0.5">
                   {[1, 2, 3, 4, 5].map((i) => (
                     <Star key={i} className="w-4 h-4 fill-accent text-accent" />
