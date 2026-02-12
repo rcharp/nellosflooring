@@ -64,12 +64,12 @@ const HeroSection = () => {
               className="flex items-center gap-3"
             >
               <div className="flex -space-x-2">
-                {[1, 2, 3, 4, 5].map((i) => (
+                {["M", "J", "J", "K"].map((initial, i) => (
                   <div
                     key={i}
                     className="w-9 h-9 rounded-full bg-secondary/20 border-2 border-primary flex items-center justify-center text-xs font-bold text-secondary"
                   >
-                    {String.fromCharCode(64 + i)}
+                    {initial}
                   </div>
                 ))}
               </div>
