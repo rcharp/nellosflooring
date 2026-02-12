@@ -107,7 +107,7 @@ const Header = () => {
             className="flex items-center gap-1.5 lg:gap-2 px-3 lg:px-5 py-2 lg:py-2.5 text-sm lg:text-base font-semibold text-secondary border border-secondary rounded-full hover:bg-secondary/10 transition-colors"
           >
             <Phone className="w-4 h-4 lg:w-5 lg:h-5" />
-            <span className="hidden sm:inline">(941) 258-4006</span>
+            (941) 258-4006
           </a>
           <button
             onClick={openQuoteModal}
