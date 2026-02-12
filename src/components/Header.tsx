@@ -47,7 +47,7 @@ const Header = () => {
     <header className="sticky top-0 z-50 border-b border-secondary/20" style={{ backgroundColor: "#0f172a" }}>
       <div className="container mx-auto flex items-center justify-between py-4 px-4 lg:px-8">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-3 shrink-0">
+        <a href="/" className="flex items-center gap-3 shrink-0 mr-4">
           <img src={icon} alt="Emmons Air icon" className="w-10 h-10 lg:hidden" width={40} height={40} />
           <img src={logo} alt="Emmons Air" className="hidden lg:block" style={{ width: "351px", height: "auto" }} />
         </a>
