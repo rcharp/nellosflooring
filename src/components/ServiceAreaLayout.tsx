@@ -78,7 +78,8 @@ const ServiceAreaPage = ({ city, tagline, intro }: ServiceAreaPageProps) => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
                 <a
                   href="tel:+19412584006"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold text-secondary border border-secondary rounded-full hover:bg-secondary/10 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold text-secondary border border-secondary hover:bg-secondary/10 transition-colors"
+                  style={{ borderRadius: "10px" }}
                 >
                   <Phone className="w-5 h-5" />
                   (941) 258-4006
@@ -153,7 +154,8 @@ const ServiceAreaPage = ({ city, tagline, intro }: ServiceAreaPageProps) => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+19412584006"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold text-secondary border border-secondary rounded-full hover:bg-secondary/10 transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold text-secondary border border-secondary hover:bg-secondary/10 transition-colors"
+                style={{ borderRadius: "10px" }}
               >
                 <Phone className="w-5 h-5" />
                 Call Now
