@@ -44,8 +44,8 @@ const Header = () => {
   const { openQuoteModal } = useQuoteModal();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-secondary/20" style={{ backgroundColor: "#0f172a" }}>
-      <div className="container mx-auto flex items-center justify-between py-4 px-4 lg:px-8">
+    <header className="sticky top-0 z-50 border-b border-secondary/20 max-w-[100vw] overflow-x-hidden" style={{ backgroundColor: "#0f172a" }}>
+      <div className="container mx-auto flex items-center justify-between py-4 px-4 lg:px-8 max-w-[100vw]">
         {/* Logo */}
         <a href="/" className="flex items-center gap-3 shrink-0 mr-4">
           <img src={icon} alt="Emmons Air icon" className="w-10 h-10 lg:hidden" width={40} height={40} />
