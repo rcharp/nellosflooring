@@ -42,7 +42,7 @@ const HeroSection = () => {
             >
               <h1 className="font-heading text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight text-primary-foreground">
                 Comfort You Can{" "}
-                <span className="text-gradient">Count On.</span>
+                <span className="text-secondary-color">Count On.</span>
                 <br />
                 Service You Can{" "}
                 <span className="text-secondary-color">Trust.</span>
