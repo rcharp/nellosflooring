@@ -2,12 +2,19 @@ import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
-import { Phone, MapPin, Clock, Mail } from "lucide-react";
+import { Phone, MapPin, Clock } from "lucide-react";
 import { useQuoteModal } from "@/components/QuoteModal";
 import heroServices from "@/assets/hero-services.jpg";
+import useSEO from "@/hooks/useSEO";
 
 const ContactPage = () => {
   const { openQuoteModal } = useQuoteModal();
+
+  useSEO({
+    title: "Contact Emmons Air | Get a Free Quote | (941) 258-4006",
+    description: "Contact Emmons Air for HVAC service in Palmetto & Bradenton. Get a free quote, schedule service, or call (941) 258-4006. Open 24/7.",
+    canonical: "https://emmonsair.com/contact",
+  });
 
   useEffect(() => {
     const script = document.createElement("script");

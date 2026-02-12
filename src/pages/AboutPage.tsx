@@ -7,9 +7,16 @@ import { useQuoteModal } from "@/components/QuoteModal";
 import familyImg from "@/assets/gallery/emmons-family.png";
 import ownerImg from "@/assets/gallery/daikin-rooftop.png";
 import heroServices from "@/assets/hero-services.jpg";
+import useSEO from "@/hooks/useSEO";
 
 const AboutPage = () => {
   const { openQuoteModal } = useQuoteModal();
+
+  useSEO({
+    title: "About Emmons Air | Family-Owned HVAC Palmetto FL",
+    description: "Meet David Emmons — over 12 years of HVAC experience serving Palmetto, Bradenton & Manatee County. Family-owned, licensed & insured. Call (941) 258-4006.",
+    canonical: "https://emmonsair.com/about",
+  });
 
   return (
     <div className="min-h-screen bg-background">
@@ -108,7 +115,7 @@ const AboutPage = () => {
               >
                 <img
                   src={ownerImg}
-                  alt="David Emmons, HVAC professional"
+                  alt="Daikin rooftop HVAC unit installed by Emmons Air"
                   className="rounded-2xl shadow-xl w-full object-cover aspect-[4/3]"
                 />
               </motion.div>

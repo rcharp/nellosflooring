@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
+import useSEO from "@/hooks/useSEO";
 
 import galleryTrailer from "@/assets/gallery/emmons-trailer.png";
 import galleryWork from "@/assets/gallery/emmons-work.png";
@@ -89,7 +90,14 @@ const images = [
   { src: galleryPackageTrailer, alt: "Goodman package unit installed at mobile home" },
 ];
 
-const GalleryPage = () => (
+const GalleryPage = () => {
+  useSEO({
+    title: "HVAC Project Gallery | Emmons Air | Palmetto FL",
+    description: "Browse photos of AC installations, repairs & maintenance by Emmons Air in Palmetto, Bradenton & Manatee County. See our quality work firsthand.",
+    canonical: "https://emmonsair.com/gallery",
+  });
+
+  return (
   <div className="min-h-screen bg-background">
     <Header />
     <main>
@@ -134,6 +142,7 @@ const GalleryPage = () => (
     </main>
     <Footer />
   </div>
-);
+  );
+};
 
 export default GalleryPage;

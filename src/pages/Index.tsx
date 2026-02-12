@@ -9,8 +9,15 @@ import GallerySection from "@/components/GallerySection";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import useSEO from "@/hooks/useSEO";
 
 const Index = () => {
+  useSEO({
+    title: "Emmons Air | HVAC Services Palmetto FL",
+    description: "Emmons Air provides expert AC repair, installation, maintenance and duct cleaning in Palmetto, Bradenton & Manatee County. Family owned since 2012. Call (941) 258-4006.",
+    canonical: "https://emmonsair.com/",
+  });
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
