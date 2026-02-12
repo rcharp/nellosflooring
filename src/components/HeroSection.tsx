@@ -3,10 +3,10 @@ import { Star } from "lucide-react";
 import { motion } from "framer-motion";
 import { useQuoteModal } from "./QuoteModal";
 import heroBg from "@/assets/hero-bg.png";
-import reviewerImg1 from "@/assets/gallery/owner-selfie.jpg";
-import reviewerImg2 from "@/assets/gallery/emmons-family.png";
-import reviewerImg3 from "@/assets/gallery/owner-thumbsup.jpg";
-import reviewerImg4 from "@/assets/gallery/event-booth.png";
+import reviewerImg1 from "@/assets/reviewers/reviewer-1.jpg";
+import reviewerImg2 from "@/assets/reviewers/reviewer-2.jpg";
+import reviewerImg3 from "@/assets/reviewers/reviewer-3.jpg";
+import reviewerImg4 from "@/assets/reviewers/reviewer-4.jpg";
 
 const HeroSection = () => {
   const { openQuoteModal } = useQuoteModal();
