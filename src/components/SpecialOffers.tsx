@@ -54,7 +54,7 @@ const SpecialOffers = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15 }}
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05, transition: { duration: 0.15 } }}
               onClick={openQuoteModal}
               className="rounded-2xl p-8 card-elevated border border-secondary/30 text-center backdrop-blur-sm cursor-pointer transition-shadow hover:shadow-xl"
               style={{ backgroundColor: "rgba(15, 23, 42, 0.8)" }}
