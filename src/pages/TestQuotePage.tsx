@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import QuoteForm from "@/components/QuoteForm";
 import heroServices from "@/assets/hero-services.jpg";
+import palmettoTruck from "@/assets/palmetto-point-truck.png";
 import useSEO from "@/hooks/useSEO";
 
 const TestQuotePage = () => {
@@ -18,6 +19,15 @@ const TestQuotePage = () => {
       <Header />
       <main>
         {/* Hero */}
+        {/* Mobile truck image */}
+        <div className="lg:hidden">
+          <img
+            src={palmettoTruck}
+            alt="Emmons Air truck and trailer at Palmetto Point"
+            className="w-full h-auto"
+          />
+        </div>
+
         <section className="relative overflow-hidden bg-black">
           <img
             src={heroServices}
