@@ -102,27 +102,29 @@ const Header = () => {
         </nav>
 
         {/* CTA - always visible */}
-        <div className="flex items-center justify-center lg:justify-end gap-3 sm:gap-3 lg:gap-3 flex-1 lg:flex-none min-w-0">
-          <a
-            href="tel:+19412584006"
-            className="flex items-center gap-1 sm:gap-1.5 lg:gap-2 px-2 sm:px-3 lg:px-6 py-2.5 sm:py-2.5 lg:py-3 text-xs sm:text-sm lg:text-base font-semibold text-secondary border border-secondary hover:bg-secondary/10 transition-colors whitespace-nowrap"
-            style={{ borderRadius: "10px" }}
-          >
-            <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 lg:w-5 lg:h-5 shrink-0" />
-            (941) 258-4006
-          </a>
-          <button
-            onClick={openQuoteModal}
-            className="px-2 sm:px-3 lg:px-6 py-2.5 sm:py-2.5 lg:py-3 text-xs sm:text-sm lg:text-base font-semibold hover:opacity-90 transition-opacity whitespace-nowrap"
-            style={{ backgroundColor: "#f59e0b", color: "#fff", borderRadius: "10px" }}
-          >
-            Get Free Quote
-          </button>
+        <div className="flex items-center flex-1 lg:flex-none min-w-0">
+          <div className="flex items-center justify-center gap-3 flex-1 lg:flex-none lg:justify-end">
+            <a
+              href="tel:+19412584006"
+              className="flex items-center gap-1 sm:gap-1.5 lg:gap-2 px-2 sm:px-3 lg:px-6 py-2.5 sm:py-2.5 lg:py-3 text-xs sm:text-sm lg:text-base font-semibold text-secondary border border-secondary hover:bg-secondary/10 transition-colors whitespace-nowrap"
+              style={{ borderRadius: "10px" }}
+            >
+              <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 lg:w-5 lg:h-5 shrink-0" />
+              (941) 258-4006
+            </a>
+            <button
+              onClick={openQuoteModal}
+              className="px-2 sm:px-3 lg:px-6 py-2.5 sm:py-2.5 lg:py-3 text-xs sm:text-sm lg:text-base font-semibold hover:opacity-90 transition-opacity whitespace-nowrap"
+              style={{ backgroundColor: "#f59e0b", color: "#fff", borderRadius: "10px" }}
+            >
+              Get Free Quote
+            </button>
+          </div>
 
           {/* Mobile Toggle */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden p-2 text-primary-foreground ml-auto"
+            className="lg:hidden p-2 text-primary-foreground ml-2"
           >
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
