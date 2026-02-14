@@ -52,7 +52,6 @@ const TestQuotePage = () => {
           consent_marketing: formData.consentMarketing,
           consent_non_marketing: formData.consentNonMarketing,
         }),
-        mode: "no-cors",
       });
 
       toast.success("Quote request sent! We'll be in touch soon.");
