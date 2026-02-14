@@ -82,7 +82,7 @@ export const QuoteModalProvider = ({ children }: { children: ReactNode }) => {
               </button>
             )}
             <div className="overflow-y-auto max-h-[90vh]">
-              <QuoteForm />
+              <QuoteForm compact />
             </div>
           </div>
         </div>

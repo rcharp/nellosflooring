@@ -13,13 +13,15 @@ const WEBHOOK_URL =
 interface QuoteFormProps {
   /** Show the icon + heading at the top */
   showHeader?: boolean;
+  /** Use compact layout (less padding/spacing) for modals */
+  compact?: boolean;
   /** Extra className on the outer wrapper */
   className?: string;
   /** Override inline styles (bg, border, opacity, etc.) */
   style?: React.CSSProperties;
 }
 
-const QuoteForm = ({ showHeader = true, className = "", style }: QuoteFormProps) => {
+const QuoteForm = ({ showHeader = true, compact = false, className = "", style }: QuoteFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     fullName: "",
@@ -78,7 +80,7 @@ const QuoteForm = ({ showHeader = true, className = "", style }: QuoteFormProps)
   return (
     <form
       onSubmit={handleSubmit}
-      className={`rounded-2xl border-2 p-8 space-y-6 shadow-2xl ${className}`}
+      className={`rounded-2xl border-2 ${compact ? 'p-5 space-y-3' : 'p-8 space-y-6'} shadow-2xl ${className}`}
       style={{
         backgroundColor: "#0f172a",
         borderColor: "#3b82f6",
@@ -86,16 +88,16 @@ const QuoteForm = ({ showHeader = true, className = "", style }: QuoteFormProps)
       }}
     >
       {showHeader && (
-        <div className="text-center space-y-3 pb-2">
-          <img src={icon} alt="Emmons Air" className="w-16 h-16 mx-auto" />
-          <h2 className="font-heading text-2xl font-bold text-white">
+        <div className={`text-center ${compact ? 'space-y-1 pb-1' : 'space-y-3 pb-2'}`}>
+          <img src={icon} alt="Emmons Air" className={`${compact ? 'w-10 h-10' : 'w-16 h-16'} mx-auto`} />
+          <h2 className={`font-heading font-bold text-white ${compact ? 'text-xl' : 'text-2xl'}`}>
             Get a Free Quote
           </h2>
         </div>
       )}
 
       {/* Full Name */}
-      <div className="space-y-2">
+      <div className={compact ? "space-y-1" : "space-y-2"}>
         <Label htmlFor="fullName" className="text-white font-semibold">
           Full Name <span className="text-secondary">*</span>
         </Label>
@@ -111,7 +113,7 @@ const QuoteForm = ({ showHeader = true, className = "", style }: QuoteFormProps)
       </div>
 
       {/* Phone */}
-      <div className="space-y-2">
+      <div className={compact ? "space-y-1" : "space-y-2"}>
         <Label htmlFor="phone" className="text-white font-semibold">
           Phone <span className="text-secondary">*</span>
         </Label>
@@ -131,7 +133,7 @@ const QuoteForm = ({ showHeader = true, className = "", style }: QuoteFormProps)
       </div>
 
       {/* What do you need help with? */}
-      <div className="space-y-2">
+      <div className={compact ? "space-y-1" : "space-y-2"}>
         <Label htmlFor="helpWith" className="text-white font-semibold">
           What do you need help with? <span className="text-secondary">*</span>
         </Label>
@@ -140,7 +142,7 @@ const QuoteForm = ({ showHeader = true, className = "", style }: QuoteFormProps)
           placeholder="Your message goes straight to my phone, so I'll be able to get back to you ASAP!"
           required
           maxLength={1000}
-          rows={4}
+          rows={compact ? 2 : 4}
           value={formData.helpWith}
           onChange={(e) => setFormData({ ...formData, helpWith: e.target.value })}
           className="bg-white/10 border-white/20 text-white placeholder:text-white/50 resize-none"
@@ -194,7 +196,7 @@ const QuoteForm = ({ showHeader = true, className = "", style }: QuoteFormProps)
       <Button
         type="submit"
         disabled={isSubmitting}
-        className="w-full font-bold text-lg py-6 hover:opacity-90 transition-opacity"
+        className={`w-full font-bold ${compact ? 'text-base py-4' : 'text-lg py-6'} hover:opacity-90 transition-opacity`}
         style={{ backgroundColor: "#f59e0b", color: "#fff", borderRadius: "10px" }}
       >
         {isSubmitting ? "Sending..." : "Get Free Quote"}
