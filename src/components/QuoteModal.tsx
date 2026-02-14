@@ -65,7 +65,7 @@ export const QuoteModalProvider = ({ children }: { children: ReactNode }) => {
           style={{ pointerEvents: isOpen ? "auto" : "none" }}
         >
           <div
-            className="relative w-full max-w-lg max-h-[90vh] overflow-hidden"
+className="relative w-full max-w-lg h-[100dvh] max-h-[100dvh] overflow-hidden flex flex-col"
             onClick={(e) => e.stopPropagation()}
             style={{
               transform: isOpen ? "scale(1)" : "scale(0.95)",
@@ -81,8 +81,8 @@ export const QuoteModalProvider = ({ children }: { children: ReactNode }) => {
                 <X className="w-5 h-5 text-foreground" />
               </button>
             )}
-            <div className="overflow-y-auto max-h-[90vh]">
-              <QuoteForm compact />
+            <div className="flex-1 overflow-hidden flex flex-col">
+              <QuoteForm compact className="flex-1 flex flex-col justify-between" />
             </div>
           </div>
         </div>
