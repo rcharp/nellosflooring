@@ -56,7 +56,7 @@ const TestQuotePage = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <QuoteForm style={{ backgroundColor: "rgba(15, 23, 42, 0.6)" }} />
+              <QuoteForm />
             </motion.div>
           </div>
         </section>
