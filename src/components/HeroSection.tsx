@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useQuoteModal } from "./QuoteModal";
 import QuoteForm from "./QuoteForm";
 import heroBg from "@/assets/hero-bg.png";
+import logo from "@/assets/logo.png";
 import reviewerImg1 from "@/assets/reviewers/reviewer-1.jpg";
 import reviewerImg2 from "@/assets/reviewers/reviewer-2.jpg";
 import reviewerImg3 from "@/assets/reviewers/reviewer-3.jpg";
@@ -30,6 +31,7 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
+              <img src={logo} alt="Emmons Air" className="lg:hidden mx-auto mb-6 w-64" />
               <h1 className="font-heading text-4xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight text-primary-foreground text-center lg:text-left">
                 Comfort You Can{" "}
                 <span className="text-secondary-color">Count On.</span>
