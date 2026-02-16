@@ -27,10 +27,10 @@ const Footer = () => (
         <div>
           <h4 className="font-heading font-semibold text-base uppercase tracking-wider mb-4 opacity-60">Services</h4>
           <nav className="space-y-3">
-            <a href="#services" className="block text-base opacity-80 hover:opacity-100 transition-opacity">AC Repair</a>
-            <a href="#services" className="block text-base opacity-80 hover:opacity-100 transition-opacity">AC Installation</a>
-            <a href="#services" className="block text-base opacity-80 hover:opacity-100 transition-opacity">AC Maintenance</a>
-            <a href="#services" className="block text-base opacity-80 hover:opacity-100 transition-opacity">Duct Cleaning</a>
+            <a href="/services/ac-repair" className="block text-base opacity-80 hover:opacity-100 transition-opacity">AC Repair</a>
+            <a href="/services/ac-installation" className="block text-base opacity-80 hover:opacity-100 transition-opacity">AC Installation</a>
+            <a href="/services/ac-maintenance" className="block text-base opacity-80 hover:opacity-100 transition-opacity">AC Maintenance</a>
+            <a href="/services/duct-cleaning" className="block text-base opacity-80 hover:opacity-100 transition-opacity">Duct Cleaning</a>
           </nav>
         </div>
 
@@ -80,9 +80,7 @@ const Footer = () => (
           </a>
         </p>
         <div className="flex items-center gap-4">
-          <a href="#" className="text-base opacity-60 hover:opacity-100 transition-opacity">Terms & Conditions</a>
-          <span className="opacity-30">|</span>
-          <a href="#" className="text-base opacity-60 hover:opacity-100 transition-opacity">Privacy Policy</a>
+          <span className="text-base opacity-60">CAC1820932</span>
         </div>
       </div>
     </div>

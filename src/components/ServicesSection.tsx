@@ -99,7 +99,7 @@ const ServicesSection = () => (
                 ))}
               </ul>
               <a
-                href="#contact"
+                href={service.href}
                 className="inline-flex items-center gap-2 text-base font-semibold text-secondary hover:gap-3 transition-all"
               >
                 Learn More <ArrowRight className="w-4 h-4" />

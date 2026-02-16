@@ -5,7 +5,7 @@ const badges = [
   { icon: Shield, label: "Licensed & Insured" },
   { icon: Clock, label: "12+ Years of Experience" },
   { icon: Phone, label: "24/7 Availability" },
-  { icon: Star, label: "4.8-Star Google Rating" },
+  { icon: Star, label: "5-Star Google Rating" },
   { icon: ThumbsUp, label: "Satisfaction Guaranteed" },
 ];
 
