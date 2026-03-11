@@ -1,24 +1,13 @@
-import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import useSEO from "@/hooks/useSEO";
 
 const ReviewPage = () => {
   useSEO({
-    title: "Leave a Review | Emmons Air | Palmetto FL",
-    description: "Share your experience with Emmons Air. Your feedback helps us improve and helps others find quality HVAC service in Palmetto & Bradenton.",
-    canonical: "https://emmonsair.com/review",
+    title: "Leave a Review | CoolBreeze HVAC",
+    description: "Share your experience with us. Your feedback helps us improve and helps others find quality HVAC service.",
+    canonical: "https://example.com/review",
   });
-
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://api.juniesystems.com/js/form_embed.js";
-    script.async = true;
-    document.body.appendChild(script);
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
 
   return (
     <div className="min-h-screen bg-background">
@@ -34,13 +23,8 @@ const ReviewPage = () => {
               Your feedback helps us improve and helps others find quality HVAC service.
             </p>
           </div>
-          <div className="bg-card rounded-2xl border border-border card-elevated overflow-hidden">
-            <iframe
-              src="https://api.juniesystems.com/widget/survey/GDi5S8ill5dR5K4tNV1Q"
-              style={{ width: "100%", minHeight: "550px", border: "none" }}
-              id="GDi5S8ill5dR5K4tNV1Q"
-              title="survey"
-            />
+          <div className="bg-card rounded-2xl border border-border card-elevated p-12 text-center">
+            <p className="text-muted-foreground">Review form placeholder — connect your review platform here.</p>
           </div>
         </div>
       </main>
