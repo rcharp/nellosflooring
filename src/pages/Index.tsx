@@ -14,8 +14,8 @@ import useSEO from "@/hooks/useSEO";
 
 const Index = () => {
   useSEO({
-    title: "CoolBreeze HVAC | HVAC Services",
-    description: "CoolBreeze HVAC provides expert AC repair, installation, maintenance and duct cleaning. Family owned. Call (555) 123-4567.",
+    title: "Nello's Flooring | Professional Flooring Services",
+    description: "Nello's Flooring provides expert hardwood, luxury vinyl plank, laminate flooring installation, sand & refinish, and floor cleaning. Over 40 years of experience. Call (727) 644-2305.",
     canonical: "https://example.com/",
   });
 

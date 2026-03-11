@@ -8,46 +8,46 @@ import serviceDuct from "@/assets/service-duct-stock.jpg";
 const services = [
   {
     image: heroRepair,
-    title: "AC Repair",
-    href: "/services/ac-repair",
+    title: "Hardwood Flooring",
+    href: "/services/hardwood-flooring",
     features: [
-      "Fast response for quick repairs",
-      "Expert diagnosis of any issue",
-      "Upfront pricing—no surprises",
-      "Same-day emergency service available",
+      "Solid and engineered wood installation",
+      "Wide variety of wood species and finishes",
+      "Expert craftsmanship for lasting beauty",
+      "Residential and commercial projects",
     ],
   },
   {
     image: heroInstall,
-    title: "AC Installation",
-    href: "/services/ac-installation",
+    title: "Luxury Vinyl Plank",
+    href: "/services/luxury-vinyl-plank",
     features: [
-      "Residential AC Installation",
-      "Energy-efficient systems to reduce costs",
-      "Proper sizing for optimal performance",
-      "Replacements and Upgrades",
+      "Waterproof and durable flooring solution",
+      "Realistic wood and stone looks",
+      "Perfect for high-traffic areas",
+      "Quick and clean installation",
     ],
   },
   {
     image: serviceMaintenance,
-    title: "AC Maintenance",
-    href: "/services/ac-maintenance",
+    title: "Sand & Refinish",
+    href: "/services/sand-and-refinish",
     features: [
-      "Prevent costly breakdowns",
-      "Lower your utility bills",
-      "Extend system lifespan",
-      "Priority scheduling available",
+      "Restore worn hardwood floors to like-new",
+      "Custom stain colors available",
+      "Dustless sanding technology",
+      "Extend the life of your existing floors",
     ],
   },
   {
     image: serviceDuct,
-    title: "Duct Cleaning",
-    href: "/services/duct-cleaning",
+    title: "Laminate Flooring",
+    href: "/services/laminate-flooring",
     features: [
-      "Remove dust, allergens, and contaminants",
-      "Improve airflow and efficiency",
-      "Reduce allergy and respiratory issues",
-      "Complete vent and ductwork cleaning",
+      "Affordable and stylish flooring option",
+      "Scratch and dent resistant",
+      "Easy maintenance and cleaning",
+      "Wide range of styles and textures",
     ],
   },
 ];
@@ -63,10 +63,10 @@ const ServicesSection = () => (
       >
         <span className="text-base font-semibold text-primary uppercase tracking-wider">What We Do</span>
         <h2 className="font-heading text-4xl lg:text-5xl font-bold text-foreground mt-3">
-          Homeowners in Palmetto, Bradenton and Sarasota Trust Us
+          Homeowners Across Florida Trust Us
         </h2>
         <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-          Complete HVAC solutions for your home comfort needs.
+          Complete flooring solutions for your home and business needs.
         </p>
       </motion.div>
 

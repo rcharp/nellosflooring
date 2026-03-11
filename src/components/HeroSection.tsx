@@ -29,10 +29,10 @@ const HeroSection = () => {
               transition={{ duration: 0.6 }}
             >
               <h1 className="font-heading text-[2.6rem] lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight text-primary-foreground text-center lg:text-left">
-                Comfort You Can{" "}
-                <span className="text-secondary-color">Count On.</span>
+                Beautiful Floors.{" "}
+                <span className="text-secondary-color">Expert Craft.</span>
                 <br />
-                <span className="block mt-5 lg:mt-0">Service You Can{" "}
+                <span className="block mt-5 lg:mt-0">Results You Can{" "}
                 <span className="text-secondary-color">Trust.</span></span>
               </h1>
             </motion.div>
@@ -43,9 +43,9 @@ const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-lg text-primary-foreground/70 max-w-lg leading-relaxed break-words"
             >
-              When your AC breaks down in July or your furnace fails in January, you need someone who shows up—fast. We're your neighbors, and we treat your home like our own.
+              Whether you're upgrading your home with stunning hardwood or refreshing worn floors with a professional sand and refinish, you deserve a team that treats your home like their own.
               <br /><br />
-              <strong>Your Company Name</strong> has been providing high-quality heating and AC installation and repair services for hundreds of families and businesses in your area.
+              <strong>Nello's Flooring</strong> has been providing high-quality flooring installation, refinishing, and cleaning services for hundreds of families and businesses across Manatee, Sarasota, and Pinellas counties for over 40 years.
             </motion.p>
 
             {/* Social Proof */}
@@ -82,14 +82,6 @@ const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="flex items-center gap-6 pt-2"
             >
-              <div className="flex items-center gap-2">
-                <span className="text-base font-semibold text-primary-foreground">Google</span>
-                <div className="flex gap-0.5">
-                  {[1, 2, 3, 4, 5].map((i) => (
-                    <Star key={i} className="w-3.5 h-3.5 fill-accent text-accent" />
-                  ))}
-                </div>
-              </div>
               <div className="flex items-center gap-2">
                 <span className="text-base font-semibold text-primary-foreground">Facebook</span>
                 <div className="flex gap-0.5">

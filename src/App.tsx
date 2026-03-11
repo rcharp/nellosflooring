@@ -6,15 +6,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { QuoteModalProvider } from "./components/QuoteModal";
 import Index from "./pages/Index";
 import ReviewPage from "./pages/ReviewPage";
-import ACRepairPage from "./pages/ACRepairPage";
-import ACInstallationPage from "./pages/ACInstallationPage";
-import ACMaintenancePage from "./pages/ACMaintenancePage";
-import DuctCleaningPage from "./pages/DuctCleaningPage";
-import PalmettoPage from "./pages/areas/PalmettoPage";
-import MemphisPage from "./pages/areas/MemphisPage";
-import BradentonPage from "./pages/areas/BradentonPage";
-import EllentonPage from "./pages/areas/EllentonPage";
-import PalmaSolaPage from "./pages/areas/PalmaSolaPage";
+import HardwoodFlooringPage from "./pages/HardwoodFlooringPage";
+import LuxuryVinylPlankPage from "./pages/LuxuryVinylPlankPage";
+import LaminateFlooringPage from "./pages/LaminateFlooringPage";
+import SandAndRefinishPage from "./pages/SandAndRefinishPage";
+import FloorCleaningPage from "./pages/FloorCleaningPage";
+import ManateeCountyPage from "./pages/areas/ManateeCountyPage";
+import SarasotaCountyPage from "./pages/areas/SarasotaCountyPage";
+import PinellasCountyPage from "./pages/areas/PinellasCountyPage";
 import GalleryPage from "./pages/GalleryPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
@@ -38,15 +37,14 @@ const App = () => (
             <Route path="/quote" element={<QuotePage />} />
             
             <Route path="/review" element={<ReviewPage />} />
-            <Route path="/services/ac-repair" element={<ACRepairPage />} />
-            <Route path="/services/ac-installation" element={<ACInstallationPage />} />
-            <Route path="/services/ac-maintenance" element={<ACMaintenancePage />} />
-            <Route path="/services/duct-cleaning" element={<DuctCleaningPage />} />
-            <Route path="/areas/palmetto" element={<PalmettoPage />} />
-            <Route path="/areas/memphis" element={<MemphisPage />} />
-            <Route path="/areas/bradenton" element={<BradentonPage />} />
-            <Route path="/areas/ellenton" element={<EllentonPage />} />
-            <Route path="/areas/palma-sola" element={<PalmaSolaPage />} />
+            <Route path="/services/hardwood-flooring" element={<HardwoodFlooringPage />} />
+            <Route path="/services/luxury-vinyl-plank" element={<LuxuryVinylPlankPage />} />
+            <Route path="/services/laminate-flooring" element={<LaminateFlooringPage />} />
+            <Route path="/services/sand-and-refinish" element={<SandAndRefinishPage />} />
+            <Route path="/services/floor-cleaning" element={<FloorCleaningPage />} />
+            <Route path="/areas/manatee-county" element={<ManateeCountyPage />} />
+            <Route path="/areas/sarasota-county" element={<SarasotaCountyPage />} />
+            <Route path="/areas/pinellas-county" element={<PinellasCountyPage />} />
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />

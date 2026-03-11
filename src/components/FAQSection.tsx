@@ -8,28 +8,28 @@ import {
 
 const faqs = [
   {
-    q: "How quickly can you respond to an emergency AC repair?",
-    a: "We offer same-day service for emergency air conditioning repairs throughout our service area. When your AC breaks down during the heat, we understand it's urgent. Call us and we'll get a certified technician to your home as quickly as possible.",
+    q: "What types of flooring do you install?",
+    a: "We install solid hardwood, engineered hardwood, luxury vinyl plank (LVP), and laminate flooring. Whether you're looking for the timeless beauty of real wood or the durability of vinyl, we have the expertise to handle any flooring project.",
   },
   {
-    q: "Do you offer financing options for AC installation and repairs?",
-    a: "Yes! We offer flexible financing plans with quick approval to help you get the comfort you need without breaking your budget. Whether you need a major repair or a complete system replacement, our financing options make it affordable.",
+    q: "Do you offer financing options for flooring projects?",
+    a: "Yes! We offer flexible financing plans with quick approval to help you get the beautiful floors you want without breaking your budget. Whether it's a full home installation or a refinishing project, our financing options make it affordable.",
   },
   {
-    q: "Do you provide free estimates for AC installation?",
-    a: "Yes! We provide free, no-obligation estimates for all air conditioning installations and system replacements. We'll assess your home's cooling needs, discuss your options, and provide upfront, transparent pricing with no hidden fees.",
+    q: "Do you provide free estimates for flooring installation?",
+    a: "Yes! We provide free, no-obligation estimates for all flooring projects. We'll assess your space, discuss your options, and provide upfront, transparent pricing with no hidden fees.",
   },
   {
-    q: "Are your technicians licensed and insured?",
-    a: "All of our technicians are fully licensed, certified, and insured to protect you and your property. Our team undergoes continuous training to stay current with the latest HVAC technology and best practices.",
+    q: "Are you licensed and insured?",
+    a: "Yes, Nello's Flooring is fully insured for both commercial and residential projects. With over 40 years of experience, you can trust that your home is in expert hands.",
   },
   {
-    q: "What areas do you service?",
-    a: "We proudly serve Palmetto, Bradenton, and surrounding areas. As a locally owned and operated family business, we're invested in our community.",
+    q: "What areas do you serve?",
+    a: "We proudly serve Manatee County, Sarasota County, and Pinellas County. As a family owned and operated business, we're invested in our local community.",
   },
   {
-    q: "Do you offer warranties on your work?",
-    a: "Yes, we stand behind all our work with warranties on both parts and labor. New AC installations come with comprehensive manufacturer warranties, and we provide additional warranty coverage on our workmanship.",
+    q: "How long does a typical flooring installation take?",
+    a: "Most residential installations can be completed in 1-3 days depending on the size of the area and the type of flooring. Sand and refinish projects typically take 3-5 days including drying time. We'll give you a detailed timeline during your free estimate.",
   },
 ];
 

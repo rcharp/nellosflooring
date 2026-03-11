@@ -4,22 +4,22 @@ import { useState, useCallback, useEffect } from "react";
 
 const testimonials = [
   {
-    text: "The owner came out to our house and diagnosed the issue quickly. He was professional, honest, and had our AC running again the same day. We won't call anyone else for our HVAC needs.",
+    text: "Angel and his team did an incredible job installing hardwood floors throughout our entire first floor. The attention to detail was outstanding, and they left our home spotless. Highly recommend Nello's Flooring!",
     name: "Sarah M.",
     rating: 5,
   },
   {
-    text: "Excellent service from start to finish. They discovered our fan motor was failing and had replacement parts the same day. Very thorough and knowledgeable. Highly recommend!",
+    text: "We had our old hardwood floors sanded and refinished by Nello's Flooring and they look brand new! The team was professional, on time, and the quality of work exceeded our expectations. Will definitely use them again.",
     name: "James R.",
     rating: 5,
   },
   {
-    text: "I've had many different HVAC companies over the years, and this is by far the best. The team exhibits the highest level of customer service I've ever experienced. You'd be making a great decision to give them a call.",
+    text: "Best flooring company in the area! Angel personally came out to give us a quote and helped us choose the perfect luxury vinyl plank for our kitchen and bathrooms. The installation was flawless.",
     name: "Patricia K.",
     rating: 5,
   },
   {
-    text: "A friend recommended them when my AC went out. They were quick to come out, diagnose the problem, and get it fixed. Very professional and accommodating. Would highly recommend to anyone!",
+    text: "A friend recommended Nello's Flooring for our laminate installation. They were quick, professional, and the price was very fair. The floors look amazing and we couldn't be happier with the results!",
     name: "Robert P.",
     rating: 5,
   },

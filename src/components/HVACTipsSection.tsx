@@ -1,9 +1,9 @@
 import { ArrowRight, BookOpen, Clock } from "lucide-react";
 import { motion } from "framer-motion";
-import hvacTips from "@/data/hvacTips";
+import flooringTips from "@/data/hvacTips";
 
 const HVACTipsSection = () => {
-  const featured = hvacTips.slice(0, 3);
+  const featured = flooringTips.slice(0, 3);
 
   return (
     <section className="py-20 lg:py-28 border-t border-border">
@@ -19,10 +19,10 @@ const HVACTipsSection = () => {
             <span className="text-base font-semibold text-primary uppercase tracking-wider">Expert Advice</span>
           </div>
           <h2 className="font-heading text-4xl lg:text-5xl font-bold text-foreground mt-3">
-            HVAC Tips & Guides
+            Flooring Tips & Guides
           </h2>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-            Helpful articles from our experienced technicians to keep your home comfortable and your system running efficiently.
+            Helpful articles from our experienced flooring professionals to keep your floors looking their best.
           </p>
         </motion.div>
 

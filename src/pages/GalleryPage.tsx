@@ -6,49 +6,30 @@ import useSEO from "@/hooks/useSEO";
 import { Image } from "lucide-react";
 
 const placeholderImages = [
-  "Fleet of service trucks",
-  "Owner with AC units",
-  "Owner portrait",
-  "Company trailer",
-  "Job site photo",
-  "Service truck",
-  "Team photo",
-  "Community event",
-  "AC diagnostics",
-  "Rooftop unit install",
-  "Family photo",
-  "AC units display",
-  "Dual condenser units",
-  "Condenser on stand",
-  "Unit on concrete pad",
-  "New condenser install",
-  "Energy efficiency label",
-  "Residential install",
-  "Package unit on stand",
-  "Wall-mounted condenser",
-  "Wall bracket unit",
-  "Commercial package unit",
-  "Mini-split outdoor unit",
-  "Mini-split system",
-  "Indoor mini-split unit",
-  "Outdoor mini-split unit",
-  "Air handler install",
-  "Ceiling-mounted handler",
-  "Horizontal air handler",
-  "Air handler ductwork",
-  "Utility closet install",
-  "Closet air handler",
-  "Vertical air handler",
-  "Elevated package unit",
-  "Condenser wall mount",
-  "Dual condensers open",
-  "Mobile home install",
+  "Hardwood installation",
+  "Floor refinishing project",
+  "Luxury vinyl plank install",
+  "Laminate flooring",
+  "Sand and refinish",
+  "Completed hardwood",
+  "Kitchen flooring",
+  "Living room floors",
+  "Commercial flooring",
+  "Engineered hardwood",
+  "Custom stain work",
+  "Before and after",
+  "Bedroom flooring",
+  "Hallway installation",
+  "Wide plank hardwood",
+  "LVP bathroom install",
+  "Entryway flooring",
+  "Dining room floors",
 ];
 
 const GalleryPage = () => {
   useSEO({
-    title: "HVAC Project Gallery | Our Work",
-    description: "Browse photos of AC installations, repairs & maintenance projects. See our quality work firsthand.",
+    title: "Flooring Project Gallery | Nello's Flooring",
+    description: "Browse photos of hardwood, LVP, and laminate flooring installations by Nello's Flooring. See our quality work firsthand.",
     canonical: "https://example.com/gallery",
   });
 
@@ -68,7 +49,7 @@ const GalleryPage = () => {
               Project Gallery
             </h1>
             <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-              Browse photos from our recent HVAC installations, repairs, and maintenance projects.
+              Browse photos from our recent flooring installations, refinishing, and cleaning projects.
             </p>
           </motion.div>
 
