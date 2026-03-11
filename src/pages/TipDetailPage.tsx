@@ -3,20 +3,19 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, Clock, BookOpen, MapPin } from "lucide-react";
-import hvacTips from "@/data/hvacTips";
+import flooringTips from "@/data/hvacTips";
 import useSEO from "@/hooks/useSEO";
 
 const TipDetailPage = () => {
   const { slug } = useParams<{ slug: string }>();
-  const tip = hvacTips.find((t) => t.slug === slug);
+  const tip = flooringTips.find((t) => t.slug === slug);
   
   if (!tip) return <Navigate to="/tips" replace />;
 
-  const currentIndex = hvacTips.indexOf(tip);
-  const otherTips = hvacTips.filter((t) => t.slug !== slug).slice(0, 3);
+  const otherTips = flooringTips.filter((t) => t.slug !== slug).slice(0, 3);
 
   useSEO({
-    title: `${tip.title} | CoolBreeze HVAC`,
+    title: `${tip.title} | Nello's Flooring`,
     description: tip.excerpt,
     canonical: `https://example.com/tips/${tip.slug}`,
   });
@@ -31,7 +30,7 @@ const TipDetailPage = () => {
             <nav className="flex items-center gap-2 text-sm text-muted-foreground">
               <a href="/" className="hover:text-foreground transition-colors">Home</a>
               <span>/</span>
-              <a href="/tips" className="hover:text-foreground transition-colors">HVAC Tips</a>
+              <a href="/tips" className="hover:text-foreground transition-colors">Flooring Tips</a>
               <span>/</span>
               <span className="text-foreground truncate">{tip.title}</span>
             </nav>
@@ -111,7 +110,7 @@ const TipDetailPage = () => {
         {/* More Tips */}
         <section className="py-12 lg:py-16 border-t border-border">
           <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
-            <h2 className="font-heading text-2xl font-bold text-foreground mb-8 text-center">More HVAC Tips</h2>
+            <h2 className="font-heading text-2xl font-bold text-foreground mb-8 text-center">More Flooring Tips</h2>
             <div className="grid md:grid-cols-3 gap-6">
               {otherTips.map((t) => (
                 <a
@@ -132,7 +131,7 @@ const TipDetailPage = () => {
             </div>
             <div className="text-center mt-8">
               <a href="/tips" className="inline-flex items-center gap-2 text-secondary font-semibold hover:gap-3 transition-all">
-                <ArrowLeft className="w-4 h-4" /> View All HVAC Tips
+                <ArrowLeft className="w-4 h-4" /> View All Flooring Tips
               </a>
             </div>
           </div>
@@ -143,7 +142,7 @@ const TipDetailPage = () => {
           <div className="container mx-auto px-4 lg:px-8 max-w-2xl">
             <p className="text-muted-foreground text-lg">
               Have questions? <a href="/contact" className="text-secondary font-semibold hover:underline">Contact our team</a> or call{" "}
-              <a href="tel:+15551234567" className="text-secondary font-semibold hover:underline">(555) 123-4567</a> for expert advice.
+              <a href="tel:+17276442305" className="text-secondary font-semibold hover:underline">(727) 644-2305</a> for expert advice.
             </p>
           </div>
         </section>

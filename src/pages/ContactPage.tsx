@@ -8,8 +8,8 @@ import useSEO from "@/hooks/useSEO";
 
 const ContactPage = () => {
   useSEO({
-    title: "Contact Us | Get a Free Quote | (555) 123-4567",
-    description: "Contact us for HVAC service in your area. Get a free quote, schedule service, or call (555) 123-4567. Open 24/7.",
+    title: "Contact Us | Get a Free Quote | (727) 644-2305",
+    description: "Contact Nello's Flooring for a free quote. Hardwood, LVP, laminate installation, sand & refinish. Call (727) 644-2305. Mon-Fri 8am-5pm.",
     canonical: "https://example.com/contact",
   });
 
@@ -31,7 +31,7 @@ const ContactPage = () => {
               <span className="text-sm font-semibold text-secondary uppercase tracking-wider">Get In Touch</span>
               <h1 className="font-heading text-4xl lg:text-6xl font-bold text-primary-foreground mt-3">Contact Us</h1>
               <p className="text-lg text-primary-foreground/70 max-w-2xl mx-auto mt-6 leading-relaxed">
-                Ready to schedule a service or have a question? We're here to help.
+                Ready to transform your floors or have a question? We're here to help.
               </p>
             </motion.div>
           </div>
@@ -53,7 +53,7 @@ const ContactPage = () => {
                     Let's Talk
                   </h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    Whether you need an <a href="/services/ac-repair" className="text-secondary hover:underline">emergency repair</a>, a <a href="/services/ac-installation" className="text-secondary hover:underline">new installation</a>, or just have questions about your HVAC system — we're here for you. We also offer <a href="/services/ac-maintenance" className="text-secondary hover:underline">routine maintenance</a> and <a href="/services/duct-cleaning" className="text-secondary hover:underline">duct cleaning</a>. Reach out and we'll get back to you as quickly as possible.
+                    Whether you need <a href="/services/hardwood-flooring" className="text-secondary hover:underline">hardwood installation</a>, <a href="/services/sand-and-refinish" className="text-secondary hover:underline">floor refinishing</a>, or just have questions about your flooring options — we're here for you. We also offer <a href="/services/luxury-vinyl-plank" className="text-secondary hover:underline">luxury vinyl plank</a>, <a href="/services/laminate-flooring" className="text-secondary hover:underline">laminate</a>, and <a href="/services/floor-cleaning" className="text-secondary hover:underline">floor cleaning</a> services. Reach out and we'll get back to you as quickly as possible.
                   </p>
                 </div>
 
@@ -64,8 +64,8 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <h3 className="font-heading font-semibold text-foreground mb-1">Phone</h3>
-                      <a href="tel:+15551234567" className="text-muted-foreground hover:text-secondary transition-colors">
-                        (555) 123-4567
+                      <a href="tel:+17276442305" className="text-muted-foreground hover:text-secondary transition-colors">
+                        (727) 644-2305
                       </a>
                     </div>
                   </div>
@@ -76,8 +76,8 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <h3 className="font-heading font-semibold text-foreground mb-1">Email</h3>
-                      <a href="mailto:info@example.com" className="text-muted-foreground hover:text-secondary transition-colors">
-                        info@example.com
+                      <a href="mailto:nellosflooring@gmail.com" className="text-muted-foreground hover:text-secondary transition-colors">
+                        nellosflooring@gmail.com
                       </a>
                     </div>
                   </div>
@@ -88,7 +88,7 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <h3 className="font-heading font-semibold text-foreground mb-1">Address</h3>
-                      <p className="text-muted-foreground">123 Main Street, Anytown, FL 34000</p>
+                      <p className="text-muted-foreground">2508 6th Ct E, Ellenton, FL 34222</p>
                     </div>
                   </div>
 
@@ -98,17 +98,23 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <h3 className="font-heading font-semibold text-foreground mb-1">Hours</h3>
-                      <p className="text-muted-foreground">Open 24 hours — we're always here when you need us!</p>
+                      <p className="text-muted-foreground">Monday - Friday: 8am - 5pm</p>
                     </div>
                   </div>
                 </div>
 
-                {/* Map placeholder */}
-                <div className="rounded-2xl overflow-hidden border border-border shadow-md bg-muted flex items-center justify-center" style={{ height: 250 }}>
-                  <div className="text-center text-muted-foreground p-8">
-                    <MapPin className="w-12 h-12 mx-auto mb-3 opacity-30" />
-                    <p className="font-semibold">Your Google Map Here</p>
-                  </div>
+                {/* Map */}
+                <div className="rounded-2xl overflow-hidden border border-border shadow-md" style={{ height: 250 }}>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.5!2d-82.527!3d27.522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDMxJzE5LjIiTiA4MsKwMzEnMzcuMiJX!5e0!3m2!1sen!2sus!4v1"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Nello's Flooring Location"
+                  />
                 </div>
               </motion.div>
 

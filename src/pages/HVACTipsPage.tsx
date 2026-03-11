@@ -3,22 +3,23 @@ import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { ArrowRight, BookOpen, Clock } from "lucide-react";
 import heroServices from "@/assets/hero-services.jpg";
-import hvacTips from "@/data/hvacTips";
+import flooringTips from "@/data/hvacTips";
 import useSEO from "@/hooks/useSEO";
 
 const categoryColors: Record<string, string> = {
   Maintenance: "bg-green-500/10 text-green-400 border-green-500/30",
-  Repair: "bg-red-500/10 text-red-400 border-red-500/30",
   Installation: "bg-blue-500/10 text-blue-400 border-blue-500/30",
-  "Air Quality": "bg-purple-500/10 text-purple-400 border-purple-500/30",
-  "Energy Savings": "bg-amber-500/10 text-amber-400 border-amber-500/30",
+  "Buying Guide": "bg-purple-500/10 text-purple-400 border-purple-500/30",
+  "Home Value": "bg-amber-500/10 text-amber-400 border-amber-500/30",
+  Refinishing: "bg-red-500/10 text-red-400 border-red-500/30",
+  Trends: "bg-teal-500/10 text-teal-400 border-teal-500/30",
 };
 
 const HVACTipsPage = () => {
   useSEO({
-    title: "HVAC Tips & Guides | CoolBreeze HVAC",
+    title: "Flooring Tips & Guides | Nello's Flooring",
     description:
-      "Expert HVAC tips. Learn about AC maintenance, energy savings, air quality, and when to repair or replace your system.",
+      "Expert flooring tips. Learn about hardwood care, flooring trends, installation advice, and when to refinish your floors.",
     canonical: "https://example.com/tips",
   });
 
@@ -50,10 +51,10 @@ const HVACTipsPage = () => {
                 </span>
               </div>
               <h1 className="font-heading text-4xl lg:text-6xl font-bold text-primary-foreground">
-                HVAC Tips & Guides
+                Flooring Tips & Guides
               </h1>
               <p className="text-lg text-primary-foreground/70 max-w-2xl mx-auto mt-6 leading-relaxed">
-                Practical advice from our experienced technicians to help you save money, improve comfort, and extend the life of your HVAC system.
+                Practical advice from our experienced flooring professionals to help you choose, maintain, and care for your floors.
               </p>
             </motion.div>
           </div>
@@ -63,7 +64,7 @@ const HVACTipsPage = () => {
         <section className="py-16 lg:py-24">
           <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
             <div className="grid md:grid-cols-2 gap-8">
-              {hvacTips.map((tip, i) => (
+              {flooringTips.map((tip, i) => (
                 <motion.a
                   key={tip.slug}
                   href={`/tips/${tip.slug}`}
@@ -105,10 +106,10 @@ const HVACTipsPage = () => {
           <div className="container mx-auto px-4 lg:px-8 max-w-4xl text-center">
             <p className="text-muted-foreground text-lg">
               Need professional help? Explore our{" "}
-              <a href="/services/ac-repair" className="text-secondary hover:underline font-semibold">AC repair</a>,{" "}
-              <a href="/services/ac-installation" className="text-secondary hover:underline font-semibold">installation</a>,{" "}
-              <a href="/services/ac-maintenance" className="text-secondary hover:underline font-semibold">maintenance</a>, and{" "}
-              <a href="/services/duct-cleaning" className="text-secondary hover:underline font-semibold">duct cleaning</a>{" "}
+              <a href="/services/hardwood-flooring" className="text-secondary hover:underline font-semibold">hardwood</a>,{" "}
+              <a href="/services/luxury-vinyl-plank" className="text-secondary hover:underline font-semibold">LVP</a>,{" "}
+              <a href="/services/sand-and-refinish" className="text-secondary hover:underline font-semibold">sand & refinish</a>, and{" "}
+              <a href="/services/floor-cleaning" className="text-secondary hover:underline font-semibold">floor cleaning</a>{" "}
               services, or <a href="/contact" className="text-secondary hover:underline font-semibold">contact us</a> for a free quote.
             </p>
           </div>

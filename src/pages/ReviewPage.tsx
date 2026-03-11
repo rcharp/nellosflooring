@@ -4,8 +4,8 @@ import useSEO from "@/hooks/useSEO";
 
 const ReviewPage = () => {
   useSEO({
-    title: "Leave a Review | CoolBreeze HVAC",
-    description: "Share your experience with us. Your feedback helps us improve and helps others find quality HVAC service.",
+    title: "Leave a Review | Nello's Flooring",
+    description: "Share your experience with Nello's Flooring. Your feedback helps us improve and helps others find quality flooring service.",
     canonical: "https://example.com/review",
   });
 
@@ -20,7 +20,7 @@ const ReviewPage = () => {
               Leave Us A Review
             </h1>
             <p className="text-muted-foreground mt-4">
-              Your feedback helps us improve and helps others find quality HVAC service.
+              Your feedback helps us improve and helps others find quality flooring service.
             </p>
           </div>
           <div className="bg-card rounded-2xl border border-border card-elevated p-12 text-center">
