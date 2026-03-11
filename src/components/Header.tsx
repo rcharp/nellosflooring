@@ -2,26 +2,26 @@ import { useState } from "react";
 import { Phone, Menu, X, ChevronDown, ChevronUp } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useQuoteModal } from "./QuoteModal";
-import logoPlaceholder from "@/assets/logo-placeholder.png";
+import logo from "@/assets/nello-logo.jpg";
+
 const navLinks = [
   { label: "Home", href: "/" },
   {
     label: "Services",
     children: [
-      { label: "AC Repair", href: "/services/ac-repair" },
-      { label: "AC Installation", href: "/services/ac-installation" },
-      { label: "AC Maintenance", href: "/services/ac-maintenance" },
-      { label: "Duct Cleaning", href: "/services/duct-cleaning" },
+      { label: "Hardwood Flooring", href: "/services/hardwood-flooring" },
+      { label: "Luxury Vinyl Plank", href: "/services/luxury-vinyl-plank" },
+      { label: "Laminate Flooring", href: "/services/laminate-flooring" },
+      { label: "Sand & Refinish", href: "/services/sand-and-refinish" },
+      { label: "Floor Cleaning", href: "/services/floor-cleaning" },
     ],
   },
   {
     label: "Service Areas",
     children: [
-      { label: "Palmetto, FL", href: "/areas/palmetto" },
-      { label: "Memphis, FL", href: "/areas/memphis" },
-      { label: "Bradenton, FL", href: "/areas/bradenton" },
-      { label: "Ellenton, FL", href: "/areas/ellenton" },
-      { label: "Palma Sola, FL", href: "/areas/palma-sola" },
+      { label: "Manatee County", href: "/areas/manatee-county" },
+      { label: "Sarasota County", href: "/areas/sarasota-county" },
+      { label: "Pinellas County", href: "/areas/pinellas-county" },
     ],
   },
   { label: "Gallery", href: "/gallery" },
@@ -46,7 +46,7 @@ const Header = () => {
       <div className="container mx-auto flex items-center justify-between py-4 px-4 lg:px-8 max-w-[100vw]">
         {/* Logo */}
         <a href="/" className="flex items-center shrink-0 mr-2 lg:mr-4">
-          <img src={logoPlaceholder} alt="Company Logo" className="h-10 sm:h-12 lg:h-14 w-auto" />
+          <img src={logo} alt="Nello's Flooring" className="h-10 sm:h-12 lg:h-14 w-auto" />
         </a>
 
         {/* Desktop Nav */}
@@ -102,12 +102,12 @@ const Header = () => {
         <div className="flex items-center flex-1 lg:flex-none min-w-0">
           <div className="flex items-center justify-center gap-3 flex-1 lg:flex-none lg:justify-end">
             <a
-              href="tel:+15551234567"
+              href="tel:+17276442305"
               className="flex items-center gap-1 sm:gap-1.5 lg:gap-2 px-2 sm:px-3 lg:px-6 py-2.5 sm:py-2.5 lg:py-3 text-xs sm:text-sm lg:text-base font-semibold text-secondary border border-secondary hover:bg-secondary/10 transition-colors whitespace-nowrap"
               style={{ borderRadius: "10px" }}
             >
               <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 lg:w-5 lg:h-5 shrink-0" />
-              (555) 123-4567
+              (727) 644-2305
             </a>
             <button
               onClick={openQuoteModal}
@@ -189,11 +189,11 @@ const Header = () => {
               )}
               <div className="pt-4 space-y-3 border-t border-secondary/20">
                 <a
-                  href="tel:+15551234567"
+                  href="tel:+17276442305"
                   className="flex items-center justify-center gap-2 w-full text-center px-6 py-3 text-sm font-semibold border border-secondary text-secondary"
                   style={{ borderRadius: "10px" }}
                 >
-                  <Phone className="w-5 h-5" /> (555) 123-4567
+                  <Phone className="w-5 h-5" /> (727) 644-2305
                 </a>
                 <button
                   onClick={() => { setMobileOpen(false); openQuoteModal(); }}

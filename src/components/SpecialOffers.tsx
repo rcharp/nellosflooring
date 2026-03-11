@@ -7,17 +7,17 @@ const offers = [
   {
     icon: Percent,
     title: "Up to 20% Off For New Customers",
-    description: "Get 20% off on repairs and 10% off on new installations and replacements.",
+    description: "Get 20% off on floor refinishing and 10% off on new flooring installations.",
   },
   {
     icon: CreditCard,
     title: "Financing Options Available",
-    description: "Get what you need now, pay over time. Flexible plans, quick approval.",
+    description: "Get the floors you love now, pay over time. Flexible plans, quick approval.",
   },
   {
     icon: Search,
-    title: "Free HVAC System Inspection",
-    description: "We give a free inspection for new systems. Schedule yours today!",
+    title: "Free Floor Inspection",
+    description: "We provide a free inspection for all flooring projects. Schedule yours today!",
   },
 ];
 

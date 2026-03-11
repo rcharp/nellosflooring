@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import icon from "@/assets/icon.png";
 
-const WEBHOOK_URL = "https://example.com/webhook-placeholder";
+const WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/GIStSvIcFqux99Wx6sGI/webhook-trigger/70F0FsS8gJ6OHYIpZM0O";
 
 interface QuoteFormProps {
   showHeader?: boolean;
@@ -94,7 +94,7 @@ const QuoteForm = ({ showHeader = true, compact = false, className = "", style }
     >
       {showHeader && (
         <div className={`text-center ${compact ? 'space-y-2 pb-1' : 'space-y-3 pb-2'}`}>
-          <img src={icon} alt="Company Logo" className="w-16 h-16 mx-auto" />
+          <img src={icon} alt="Nello's Flooring" className="w-16 h-16 mx-auto" />
           <h2 className={`font-heading font-bold text-white ${compact ? 'text-2xl mt-1' : 'text-2xl'}`}>
             Get a Free Quote
           </h2>
@@ -141,7 +141,7 @@ const QuoteForm = ({ showHeader = true, compact = false, className = "", style }
         </Label>
         <Textarea
           id="helpWith"
-          placeholder="Describe your HVAC needs and we'll get back to you ASAP!"
+          placeholder="Describe your flooring needs and we'll get back to you ASAP!"
           required
           maxLength={1000}
           rows={compact ? 2 : 4}
@@ -164,7 +164,7 @@ const QuoteForm = ({ showHeader = true, compact = false, className = "", style }
           htmlFor="consentMarketing"
           className="text-white/70 text-xs leading-relaxed font-normal cursor-pointer"
         >
-          I consent to receive marketing text messages from [Your Company] at the
+          I consent to receive marketing text messages from Nello's Flooring at the
           phone number provided. Consent is not a condition of purchase. Message
           frequency may vary. Message &amp; data rates may apply. Text HELP for
           assistance, reply STOP to opt out.
@@ -184,7 +184,7 @@ const QuoteForm = ({ showHeader = true, compact = false, className = "", style }
           htmlFor="consentNonMarketing"
           className="text-white/70 text-xs leading-relaxed font-normal cursor-pointer"
         >
-          I consent to receive non-marketing text messages from [Your Company]
+          I consent to receive non-marketing text messages from Nello's Flooring
           regarding appointment confirmations and reminders, customer support
           updates, and service-related follow-ups at the phone number provided.
           Consent is not a condition of purchase. Message frequency may vary.
