@@ -148,7 +148,7 @@ const ServiceAreaPage = ({ city, tagline, intro }: ServiceAreaPageProps) => {
         <section className="py-12 lg:py-16 border-t border-border">
           <div className="container mx-auto px-4 lg:px-8 max-w-4xl text-center">
             <p className="text-muted-foreground text-lg">
-              Want to know who's coming to your home? <a href="/about" className="text-secondary font-semibold hover:underline">Meet the Emmons Air team</a> — family-owned and locally operated since 2012. You can also <a href="/gallery" className="text-secondary font-semibold hover:underline">browse our work gallery</a> to see recent projects.
+              Want to know who's coming to your home? <a href="/about" className="text-secondary font-semibold hover:underline">Meet our team</a> — family-owned and locally operated. You can also <a href="/gallery" className="text-secondary font-semibold hover:underline">browse our work gallery</a> to see recent projects.
             </p>
           </div>
         </section>
