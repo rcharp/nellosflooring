@@ -16,9 +16,9 @@ const TipDetailPage = () => {
   const otherTips = hvacTips.filter((t) => t.slug !== slug).slice(0, 3);
 
   useSEO({
-    title: `${tip.title} | Emmons Air`,
+    title: `${tip.title} | CoolBreeze HVAC`,
     description: tip.excerpt,
-    canonical: `https://emmonsair.com/tips/${tip.slug}`,
+    canonical: `https://example.com/tips/${tip.slug}`,
   });
 
   return (
