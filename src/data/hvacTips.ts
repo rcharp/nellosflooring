@@ -357,7 +357,7 @@ const hvacTips: HVACTip[] = [
       "Mini-splits avoid the 20-30% energy loss in ductwork and only cool occupied rooms. A multi-zone system can be significantly more efficient than central AC.",
       "Central AC has advantages for large, open-concept homes. It's also typically less expensive per ton when ductwork already exists.",
       "Cost comparison: Central AC runs $4,000-$8,000 installed. Multi-zone mini-splits cost $3,000-$10,000+. Single-zone mini-splits start around $2,000-$4,000.",
-      "Emmons Air installs both systems throughout Palmetto, Bradenton, Palma Sola, and Manatee County. We'll recommend the best fit for your home.",
+      "We install both systems throughout our service area. We'll recommend the best fit for your home.",
     ],
     relatedServices: [
       { label: "AC Installation", href: "/services/ac-installation" },
