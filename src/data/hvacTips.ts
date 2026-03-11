@@ -284,7 +284,7 @@ const hvacTips: HVACTip[] = [
       "Check your outdoor unit. Make sure it's running, clear of debris, and has at least 2 feet of clearance on all sides. If the fan isn't spinning, try resetting the circuit breaker.",
       "Look at your circuit breakers. Your AC typically has two breakers. If either has tripped, reset it once. If it trips again immediately, call a professional.",
       "Check your vents. Make sure supply and return vents are open and unobstructed by furniture, rugs, or curtains.",
-      "If none of these steps work, you need professional diagnosis. Emmons Air offers same-day AC repair throughout Palmetto, Bradenton, and Manatee County.",
+      "If none of these steps work, you need professional diagnosis. We offer same-day AC repair throughout our service area.",
     ],
     relatedServices: [
       { label: "AC Repair", href: "/services/ac-repair" },
