@@ -13,39 +13,48 @@ interface ServiceAreaPageProps {
 
 const services = [
   {
-    title: "AC Repair",
-    href: "/services/ac-repair",
+    title: "Hardwood Flooring",
+    href: "/services/hardwood-flooring",
     items: [
-      "Diagnostic services — troubleshooting faulty AC units",
-      "Common repairs — refrigerant leaks, thermostat issues, broken compressors or fans",
-      "Emergency repairs — same-day or 24/7 services for urgent problems",
+      "Solid and engineered hardwood installation",
+      "Wide variety of wood species and finishes",
+      "Expert craftsmanship for residential and commercial spaces",
     ],
   },
   {
-    title: "AC Maintenance",
-    href: "/services/ac-maintenance",
+    title: "Luxury Vinyl Plank",
+    href: "/services/luxury-vinyl-plank",
     items: [
-      "Routine inspections — checking system performance, identifying potential issues",
-      "Filter replacement — improving air quality and unit efficiency",
-      "Cleaning coils & fins — preventing dirt buildup and optimizing energy efficiency",
+      "Waterproof and scratch-resistant flooring",
+      "Realistic wood and stone looks",
+      "Perfect for kitchens, bathrooms, and high-traffic areas",
     ],
   },
   {
-    title: "AC Installation",
-    href: "/services/ac-installation",
+    title: "Sand & Refinish",
+    href: "/services/sand-and-refinish",
     items: [
-      "New system consultation — assessing property needs for the best AC unit fit",
-      "Energy-efficient systems — reducing energy consumption and utility costs",
-      "Custom installations — seamless integration with existing HVAC infrastructure",
+      "Restore worn hardwood floors to like-new condition",
+      "Custom stain colors to match your décor",
+      "Extend the life of your existing floors",
     ],
   },
   {
-    title: "Duct Cleaning",
-    href: "/services/duct-cleaning",
+    title: "Laminate Flooring",
+    href: "/services/laminate-flooring",
     items: [
-      "Air quality improvement — removing dust, allergens, and pollutants",
-      "Efficiency boost — improving airflow throughout your home",
-      "Mold prevention — sanitizing ductwork to prevent mold and mildew growth",
+      "Affordable and stylish wood-look flooring",
+      "Scratch and dent resistant for busy homes",
+      "Quick and clean installation process",
+    ],
+  },
+  {
+    title: "Floor Cleaning",
+    href: "/services/floor-cleaning",
+    items: [
+      "Deep cleaning for all floor types",
+      "Professional-grade products and equipment",
+      "Restore shine and extend floor life",
     ],
   },
 ];
@@ -73,18 +82,18 @@ const ServiceAreaPage = ({ city, tagline, intro }: ServiceAreaPageProps) => {
                 <span className="text-sm font-semibold text-secondary uppercase tracking-wider">Service Area</span>
               </div>
               <h1 className="font-heading text-4xl lg:text-6xl font-bold text-primary-foreground">
-                HVAC Services in {city}
+                Flooring Services in {city}
               </h1>
               <p className="text-xl text-primary-foreground/80 mt-3 font-medium">{tagline}</p>
               <p className="text-lg text-primary-foreground/70 max-w-2xl mx-auto mt-6 leading-relaxed">{intro}</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
                 <a
-                  href="tel:+15551234567"
+                  href="tel:+17276442305"
                   className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold text-secondary border border-secondary hover:bg-secondary/10 transition-colors"
                   style={{ borderRadius: "10px" }}
                 >
                   <Phone className="w-5 h-5" />
-                  (555) 123-4567
+                  (727) 644-2305
                 </a>
                 <button
                   onClick={openQuoteModal}
@@ -108,7 +117,7 @@ const ServiceAreaPage = ({ city, tagline, intro }: ServiceAreaPageProps) => {
               className="text-center mb-16"
             >
               <h2 className="font-heading text-3xl lg:text-4xl font-bold text-foreground">
-                HVAC Services We Provide in {city}
+                Flooring Services We Provide in {city}
               </h2>
             </motion.div>
 
@@ -148,7 +157,7 @@ const ServiceAreaPage = ({ city, tagline, intro }: ServiceAreaPageProps) => {
         <section className="py-12 lg:py-16 border-t border-border">
           <div className="container mx-auto px-4 lg:px-8 max-w-4xl text-center">
             <p className="text-muted-foreground text-lg">
-              Want to know who's coming to your home? <a href="/about" className="text-secondary font-semibold hover:underline">Meet our team</a> — family-owned and locally operated. You can also <a href="/gallery" className="text-secondary font-semibold hover:underline">browse our work gallery</a> to see recent projects.
+              Want to know who's working on your floors? <a href="/about" className="text-secondary font-semibold hover:underline">Meet our team</a> — family-owned and locally operated with over 40 years of experience. You can also <a href="/gallery" className="text-secondary font-semibold hover:underline">browse our work gallery</a> to see recent projects.
             </p>
           </div>
         </section>
@@ -157,19 +166,19 @@ const ServiceAreaPage = ({ city, tagline, intro }: ServiceAreaPageProps) => {
         <section className="py-16 relative overflow-hidden" style={{ backgroundColor: "#0f172a" }}>
           <div className="container mx-auto px-4 lg:px-8 text-center">
             <h2 className="font-heading text-3xl lg:text-4xl font-bold text-primary-foreground mb-4">
-              Need HVAC Service in {city}?
+              Need Flooring Service in {city}?
             </h2>
             <p className="text-primary-foreground/70 mb-8 max-w-xl mx-auto">
-              <a href="/contact" className="text-secondary hover:underline">Contact us</a> today. We're your trusted local HVAC experts serving {city} and surrounding areas.
+              <a href="/contact" className="text-secondary hover:underline">Contact us</a> today. We're your trusted local flooring experts serving {city} and surrounding areas.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+15551234567"
+                href="tel:+17276442305"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold text-secondary border border-secondary hover:bg-secondary/10 transition-colors"
                 style={{ borderRadius: "10px" }}
               >
                 <Phone className="w-5 h-5" />
-                (555) 123-4567
+                (727) 644-2305
               </a>
               <button
                 onClick={openQuoteModal}

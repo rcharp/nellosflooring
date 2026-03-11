@@ -45,7 +45,7 @@ const useSEO = ({ title, description, canonical }: SEOProps) => {
     }
 
     return () => {
-      document.title = "CoolBreeze HVAC | HVAC Services";
+      document.title = "Nello's Flooring | Professional Flooring Services";
     };
   }, [title, description, canonical]);
 };

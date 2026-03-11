@@ -37,12 +37,12 @@ const ServicePage = ({ title, subtitle, intro, sections, benefits }: ServicePage
               <p className="text-lg text-primary-foreground/70 max-w-2xl mx-auto mt-6 leading-relaxed">{intro}</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
                 <a
-                   href="tel:+15551234567"
+                   href="tel:+17276442305"
                   className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold text-secondary border border-secondary hover:bg-secondary/10 transition-colors"
                   style={{ borderRadius: "10px" }}
                 >
                   <Phone className="w-5 h-5" />
-                  (555) 123-4567
+                  (727) 644-2305
                 </a>
                 <button
                   onClick={openQuoteModal}
@@ -110,12 +110,13 @@ const ServicePage = ({ title, subtitle, intro, sections, benefits }: ServicePage
         <section className="py-16 lg:py-20">
           <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
             <h2 className="font-heading text-2xl lg:text-3xl font-bold text-foreground mb-8 text-center">Explore Our Other Services</h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {[
-                { label: "AC Repair", href: "/services/ac-repair" },
-                { label: "AC Installation", href: "/services/ac-installation" },
-                { label: "AC Maintenance", href: "/services/ac-maintenance" },
-                { label: "Duct Cleaning", href: "/services/duct-cleaning" },
+                { label: "Hardwood Flooring", href: "/services/hardwood-flooring" },
+                { label: "Luxury Vinyl Plank", href: "/services/luxury-vinyl-plank" },
+                { label: "Laminate Flooring", href: "/services/laminate-flooring" },
+                { label: "Sand & Refinish", href: "/services/sand-and-refinish" },
+                { label: "Floor Cleaning", href: "/services/floor-cleaning" },
               ].map((s) => (
                 <a
                   key={s.href}
@@ -136,17 +137,15 @@ const ServicePage = ({ title, subtitle, intro, sections, benefits }: ServicePage
               <MapPin className="w-5 h-5 text-secondary" />
               <span className="text-sm font-semibold text-secondary uppercase tracking-wider">Areas We Serve</span>
             </div>
-            <h2 className="font-heading text-2xl lg:text-3xl font-bold text-foreground mb-6">Proudly Serving Manatee County</h2>
+            <h2 className="font-heading text-2xl lg:text-3xl font-bold text-foreground mb-6">Proudly Serving Florida's Gulf Coast</h2>
             <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-              We provide expert HVAC services throughout the greater Palmetto and Bradenton area. <a href="/about" className="text-secondary hover:underline">Learn more about our team</a>.
+              We provide expert flooring services throughout Manatee, Sarasota, and Pinellas counties. <a href="/about" className="text-secondary hover:underline">Learn more about our team</a>.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               {[
-                { label: "Palmetto, FL", href: "/areas/palmetto" },
-                { label: "Bradenton, FL", href: "/areas/bradenton" },
-                { label: "Memphis, FL", href: "/areas/memphis" },
-                { label: "Ellenton, FL", href: "/areas/ellenton" },
-                { label: "Palma Sola, FL", href: "/areas/palma-sola" },
+                { label: "Manatee County", href: "/areas/manatee-county" },
+                { label: "Sarasota County", href: "/areas/sarasota-county" },
+                { label: "Pinellas County", href: "/areas/pinellas-county" },
               ].map((area) => (
                 <a
                   key={area.href}
@@ -169,12 +168,12 @@ const ServicePage = ({ title, subtitle, intro, sections, benefits }: ServicePage
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+15551234567"
+                href="tel:+17276442305"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold text-secondary border border-secondary hover:bg-secondary/10 transition-colors"
                 style={{ borderRadius: "10px" }}
               >
                 <Phone className="w-5 h-5" />
-                (555) 123-4567
+                (727) 644-2305
               </a>
               <button
                 onClick={openQuoteModal}
