@@ -45,11 +45,8 @@ const Header = () => {
     <header className="sticky top-0 z-50 border-b border-secondary/20 max-w-[100vw]" style={{ backgroundColor: "#0f172a" }}>
       <div className="container mx-auto flex items-center justify-between py-4 px-4 lg:px-8 max-w-[100vw]">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-3 shrink-0 mr-2 lg:mr-4">
-          <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-lg bg-secondary flex items-center justify-center">
-            <span className="text-secondary-foreground font-bold text-sm sm:text-base lg:text-lg">CB</span>
-          </div>
-          <span className="hidden lg:block font-heading text-xl font-bold text-primary-foreground">CoolBreeze HVAC</span>
+        <a href="/" className="flex items-center shrink-0 mr-2 lg:mr-4">
+          <img src={logoPlaceholder} alt="Company Logo" className="h-10 sm:h-12 lg:h-14 w-auto" />
         </a>
 
         {/* Desktop Nav */}
