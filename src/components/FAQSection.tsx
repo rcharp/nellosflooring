@@ -9,7 +9,7 @@ import {
 const faqs = [
   {
     q: "How quickly can you respond to an emergency AC repair?",
-    a: "We offer same-day service for emergency air conditioning repairs throughout Palmetto, Bradenton, Sarasota, and Manatee County. When your AC breaks down during Florida's heat, we understand it's urgent. Call us and we'll get a certified technician to your home as quickly as possible.",
+    a: "We offer same-day service for emergency air conditioning repairs throughout our service area. When your AC breaks down during the heat, we understand it's urgent. Call us and we'll get a certified technician to your home as quickly as possible.",
   },
   {
     q: "Do you offer financing options for AC installation and repairs?",
@@ -21,11 +21,11 @@ const faqs = [
   },
   {
     q: "Are your technicians licensed and insured?",
-    a: "All Emmons Air technicians are fully licensed, certified, and insured to protect you and your property. Our team undergoes continuous training to stay current with the latest HVAC technology and best practices.",
+    a: "All of our technicians are fully licensed, certified, and insured to protect you and your property. Our team undergoes continuous training to stay current with the latest HVAC technology and best practices.",
   },
   {
     q: "What areas do you service?",
-    a: "We proudly serve Palmetto, Bradenton, Sarasota, and all of Manatee County. As a locally owned and operated family business with over 12 years in the area, we're invested in our community.",
+    a: "We proudly serve Palmetto, Bradenton, and surrounding areas. As a locally owned and operated family business, we're invested in our community.",
   },
   {
     q: "Do you offer warranties on your work?",

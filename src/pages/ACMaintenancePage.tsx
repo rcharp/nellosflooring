@@ -3,16 +3,16 @@ import useSEO from "@/hooks/useSEO";
 
 const ACMaintenancePage = () => {
   useSEO({
-    title: "AC Maintenance Palmetto FL | Tune-Ups | Emmons Air",
-    description: "Preventive AC maintenance in Palmetto & Bradenton. Keep your system efficient with regular tune-ups. Family owned, licensed & insured. Call (844) 520-1313.",
-    canonical: "https://emmonsair.com/services/ac-maintenance",
+    title: "AC Maintenance | Tune-Ups | CoolBreeze HVAC",
+    description: "Preventive AC maintenance. Keep your system efficient with regular tune-ups. Family owned, licensed & insured. Call (555) 123-4567.",
+    canonical: "https://example.com/services/ac-maintenance",
   });
 
   return (
     <ServicePage
       title="AC Maintenance Services"
       subtitle="Prevent Costly Breakdowns"
-      intro="Regular maintenance is the key to ensuring your air conditioning system operates efficiently, minimizes energy consumption, and extends its lifespan. Emmons Air offers comprehensive AC maintenance services to keep your system in top condition year-round."
+      intro="Regular maintenance is the key to ensuring your air conditioning system operates efficiently, minimizes energy consumption, and extends its lifespan. We offer comprehensive AC maintenance services to keep your system in top condition year-round."
       sections={[
         {
           heading: "Our Maintenance Services",

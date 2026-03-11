@@ -3,16 +3,16 @@ import useSEO from "@/hooks/useSEO";
 
 const ACRepairPage = () => {
   useSEO({
-    title: "AC Repair Palmetto FL | Same-Day Service | Emmons Air",
-    description: "Fast, reliable AC repair in Palmetto, Bradenton & Manatee County. 24/7 emergency service, upfront pricing. Licensed & insured. Call (844) 520-1313.",
-    canonical: "https://emmonsair.com/services/ac-repair",
+    title: "AC Repair | Same-Day Service | CoolBreeze HVAC",
+    description: "Fast, reliable AC repair. 24/7 emergency service, upfront pricing. Licensed & insured. Call (555) 123-4567.",
+    canonical: "https://example.com/services/ac-repair",
   });
 
   return (
     <ServicePage
       title="AC Repair Services"
-      subtitle="Beat the Heat with Emmons Air"
-      intro="When your AC system breaks down, you need a trustworthy repair company to get it back up and running quickly. Emmons Air provides fast, reliable AC repair services in Palmetto, Bradenton, Memphis, Ellenton and Palma Sola."
+      subtitle="Beat the Heat"
+      intro="When your AC system breaks down, you need a trustworthy repair company to get it back up and running quickly. We provide fast, reliable AC repair services in your area."
       sections={[
         {
           heading: "Understanding AC Repair Needs in Florida",
@@ -30,9 +30,9 @@ const ACRepairPage = () => {
           ],
         },
         {
-          heading: "Why Choose Emmons Air for AC Repair?",
+          heading: "Why Choose Us for AC Repair?",
           content: [
-            "Over 12 years of experience in the HVAC industry",
+            "Over 10 years of experience in the HVAC industry",
             "Licensed and insured technicians",
             "24/7 emergency repair services",
             "Upfront, transparent pricing — no surprises",

@@ -3,16 +3,16 @@ import useSEO from "@/hooks/useSEO";
 
 const DuctCleaningPage = () => {
   useSEO({
-    title: "Duct Cleaning Palmetto FL | Air Quality | Emmons Air",
-    description: "Professional duct cleaning in Palmetto & Bradenton. Remove dust, allergens & mold for healthier indoor air. Licensed & insured. Call (844) 520-1313.",
-    canonical: "https://emmonsair.com/services/duct-cleaning",
+    title: "Duct Cleaning | Air Quality | CoolBreeze HVAC",
+    description: "Professional duct cleaning. Remove dust, allergens & mold for healthier indoor air. Licensed & insured. Call (555) 123-4567.",
+    canonical: "https://example.com/services/duct-cleaning",
   });
 
   return (
     <ServicePage
       title="Duct Cleaning Services"
-      subtitle="Breathe Easy with Emmons Air"
-      intro="Your HVAC ducts can accumulate dust, allergens, and other contaminants over time, impacting indoor air quality and reducing system efficiency. Emmons Air offers expert duct cleaning services to help you maintain a healthy home environment."
+      subtitle="Breathe Easy"
+      intro="Your HVAC ducts can accumulate dust, allergens, and other contaminants over time, impacting indoor air quality and reducing system efficiency. We offer expert duct cleaning services to help you maintain a healthy home environment."
       sections={[
         {
           heading: "Our Duct Cleaning Process",

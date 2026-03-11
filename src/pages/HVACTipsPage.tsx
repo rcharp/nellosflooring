@@ -16,10 +16,10 @@ const categoryColors: Record<string, string> = {
 
 const HVACTipsPage = () => {
   useSEO({
-    title: "HVAC Tips & Guides | Emmons Air | Palmetto FL",
+    title: "HVAC Tips & Guides | CoolBreeze HVAC",
     description:
-      "Expert HVAC tips from Emmons Air. Learn about AC maintenance, energy savings, air quality, and when to repair or replace your system in Palmetto & Bradenton.",
-    canonical: "https://emmonsair.com/tips",
+      "Expert HVAC tips. Learn about AC maintenance, energy savings, air quality, and when to repair or replace your system.",
+    canonical: "https://example.com/tips",
   });
 
   return (

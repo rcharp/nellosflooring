@@ -143,7 +143,7 @@ const TipDetailPage = () => {
           <div className="container mx-auto px-4 lg:px-8 max-w-2xl">
             <p className="text-muted-foreground text-lg">
               Have questions? <a href="/contact" className="text-secondary font-semibold hover:underline">Contact our team</a> or call{" "}
-              <a href="tel:+18445201313" className="text-secondary font-semibold hover:underline">(844) 520-1313</a> for expert advice.
+              <a href="tel:+15551234567" className="text-secondary font-semibold hover:underline">(555) 123-4567</a> for expert advice.
             </p>
           </div>
         </section>

@@ -3,16 +3,16 @@ import useSEO from "@/hooks/useSEO";
 
 const ACInstallationPage = () => {
   useSEO({
-    title: "AC Installation Palmetto FL | New System Install | Emmons Air",
-    description: "Professional AC installation in Palmetto & Bradenton. Energy-efficient systems, upfront pricing, manufacturer warranties. Call Emmons Air at (844) 520-1313.",
-    canonical: "https://emmonsair.com/services/ac-installation",
+    title: "AC Installation | New System Install | CoolBreeze HVAC",
+    description: "Professional AC installation. Energy-efficient systems, upfront pricing, manufacturer warranties. Call (555) 123-4567.",
+    canonical: "https://example.com/services/ac-installation",
   });
 
   return (
     <ServicePage
       title="AC Installation Services"
-      subtitle="Beat the Heat with Emmons Air"
-      intro="Whether you're a homeowner, a business owner, or managing a commercial property, ensuring your AC is installed correctly is crucial for comfort and efficiency. Emmons Air provides expert installation services throughout the Palmetto and Bradenton areas."
+      subtitle="Expert Installation"
+      intro="Whether you're a homeowner, a business owner, or managing a commercial property, ensuring your AC is installed correctly is crucial for comfort and efficiency. We provide expert installation services throughout your area."
       sections={[
         {
           heading: "Our Installation Services",
@@ -24,7 +24,7 @@ const ACInstallationPage = () => {
           ],
         },
         {
-          heading: "Why Choose Emmons Air?",
+          heading: "Why Choose Us?",
           content: [
             "Years of experience with knowledge and skills to handle any installation project",
             "Quality products from leading manufacturers known for performance and reliability",
