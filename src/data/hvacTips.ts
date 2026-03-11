@@ -236,7 +236,7 @@ const hvacTips: HVACTip[] = [
       "An oversized AC is surprisingly common and problematic. It cools quickly but short-cycles, failing to remove adequate humidity, causing uneven temperatures, and accelerating wear on the compressor.",
       "An undersized system runs constantly, driving up energy bills and leaving your home uncomfortable on the hottest days.",
       "In Florida's climate, slightly undersized is actually preferable to oversized. A system that runs longer cycles dehumidifies better and provides more consistent comfort.",
-      "At Emmons Air, every installation begins with a thorough load calculation. We assess your Palmetto, Bradenton, or Manatee County home to recommend the exact right system.",
+      "Every installation we perform begins with a thorough load calculation. We assess your home to recommend the exact right system.",
     ],
     relatedServices: [
       { label: "AC Installation", href: "/services/ac-installation" },
