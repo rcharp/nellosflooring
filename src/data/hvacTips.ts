@@ -407,7 +407,7 @@ const hvacTips: HVACTip[] = [
       "Seasonally: Before summer, replace your filter, clear the outdoor unit, and test your system on a mild day.",
       "Check accessible ductwork for visible damage, disconnections, or signs of moisture and mold.",
       "What NOT to do: Never attempt refrigerant work, electrical repairs, or deep coil cleaning. These require professional training and equipment.",
-      "Emmons Air offers thorough tune-ups throughout Palmetto, Bradenton, Palma Sola, and Manatee County. We recommend at least one professional visit per year.",
+      "We offer thorough tune-ups throughout our service area. We recommend at least one professional visit per year.",
     ],
     relatedServices: [
       { label: "AC Maintenance", href: "/services/ac-maintenance" },
