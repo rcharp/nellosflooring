@@ -260,7 +260,7 @@ const hvacTips: HVACTip[] = [
       "Dirty ducts reduce system efficiency. A buildup of just 0.042 inches of dust on a coil can decrease efficiency by 21%. Clean ducts mean your system works less and lasts longer.",
       "The NADCA recommends cleaning every 3-5 years, but Florida homes may benefit from more frequent cleaning due to our extended cooling season and high humidity.",
       "Professional duct cleaning involves powerful vacuum systems that create negative pressure while specialized tools dislodge and remove debris. It's not a DIY job.",
-      "Emmons Air provides thorough duct cleaning services throughout Palmetto, Ellenton, Memphis, and Manatee County. We also inspect for leaks, damage, and insulation issues while we clean.",
+      "We provide thorough duct cleaning services throughout our service area. We also inspect for leaks, damage, and insulation issues while we clean.",
     ],
     relatedServices: [
       { label: "Duct Cleaning", href: "/services/duct-cleaning" },
