@@ -27,25 +27,37 @@ import lightOakStairs from "@/assets/gallery/light-oak-stairs.jpg";
 import stairsBefore from "@/assets/gallery/stairs-before.jpg";
 import waterfrontBefore from "@/assets/gallery/waterfront-before.jpg";
 import fireplaceBefore from "@/assets/gallery/fireplace-before.jpg";
+import gymAfter2 from "@/assets/gallery/gym-after-2.jpg";
+import gymAfter3 from "@/assets/gallery/gym-after-3.jpg";
+import hotworxLobby from "@/assets/gallery/hotworx-lobby.jpg";
+import gymBeforeConcrete from "@/assets/gallery/gym-before-concrete.jpg";
+import hotworxBeforeBare from "@/assets/gallery/hotworx-before-bare.jpg";
+import waterfrontLivingWide from "@/assets/gallery/waterfront-living-wide.jpg";
+import oakStairsTop from "@/assets/gallery/oak-stairs-top.jpg";
 
 const galleryImages = [
   { src: grandFireplace, alt: "Grand living room with fireplace and hardwood flooring", category: "Hardwood" },
   { src: grandLiving, alt: "Open floor plan with hardwood and stone columns", category: "Hardwood" },
   { src: waterfrontAfter, alt: "Waterfront living room with new hardwood floors", category: "Hardwood" },
   { src: waterfrontAfterWide, alt: "Waterfront home wide angle hardwood flooring", category: "Hardwood" },
+  { src: waterfrontLivingWide, alt: "Coastal home with wide plank hardwood flooring", category: "Hardwood" },
   { src: fireplaceRoom, alt: "Living room with ornate fireplace and hardwood floors", category: "Hardwood" },
   { src: stoneArchway, alt: "Stone archway with hardwood flooring and staircase", category: "Hardwood" },
   { src: hallwayArches, alt: "Elegant hallway with hardwood flooring and stone arches", category: "Hardwood" },
   { src: openFloor, alt: "Spacious room with chandelier and hardwood flooring", category: "Hardwood" },
   { src: grandChandelier, alt: "Grand room with chandelier and rich hardwood floors", category: "Hardwood" },
   { src: bedroomHardwood, alt: "Bedroom with beautiful hardwood flooring", category: "Hardwood" },
-  { src: waterfrontLiving, alt: "Coastal living room with hardwood floors", category: "Hardwood" },
+  { src: waterfrontLiving, alt: "Coastal living room with hardwood floors and ocean view", category: "Hardwood" },
+  { src: tileTransition, alt: "Hardwood to tile flooring transition detail", category: "Hardwood" },
   { src: stairsAfterBottom, alt: "Staircase with dark hardwood treads - finished", category: "Stairs" },
   { src: stairsAfterTop, alt: "Hardwood staircase from top view", category: "Stairs" },
   { src: stairsAfterDown, alt: "Hardwood staircase looking down", category: "Stairs" },
   { src: lightOakStairs, alt: "Light oak staircase with white risers", category: "Stairs" },
-  { src: tileTransition, alt: "Hardwood to tile flooring transition detail", category: "Hardwood" },
+  { src: oakStairsTop, alt: "Natural oak staircase from above", category: "Stairs" },
+  { src: gymAfter2, alt: "Commercial gym rubber flooring - weight area", category: "Commercial" },
+  { src: gymAfter3, alt: "Commercial gym rubber flooring - workout zone", category: "Commercial" },
   { src: commercialGym, alt: "Commercial gym rubber flooring installation", category: "Commercial" },
+  { src: hotworxLobby, alt: "Hotworx studio LVP flooring at front desk", category: "Commercial" },
 ];
 
 const beforeAfterPairs = [
@@ -61,7 +73,7 @@ const beforeAfterPairs = [
     after: waterfrontAfterWide,
     beforeAlt: "Living room with old carpet",
     afterAlt: "Living room with new hardwood flooring",
-    label: "Waterfront Home Transformation",
+    label: "Waterfront Home",
   },
   {
     before: fireplaceBefore,
@@ -69,6 +81,20 @@ const beforeAfterPairs = [
     beforeAlt: "Grand room before floor refinishing",
     afterAlt: "Grand room with refinished hardwood floors",
     label: "Grand Room Refinish",
+  },
+  {
+    before: hotworxBeforeBare,
+    after: hotworxLobby,
+    beforeAlt: "Bare concrete at Hotworx gym",
+    afterAlt: "Finished LVP flooring at Hotworx lobby",
+    label: "Hotworx Commercial Install",
+  },
+  {
+    before: gymBeforeConcrete,
+    after: gymAfter2,
+    beforeAlt: "Gym with concrete floors and rubber tiles starting",
+    afterAlt: "Finished commercial rubber gym flooring",
+    label: "Gym Rubber Flooring",
   },
 ];
 
@@ -140,7 +166,6 @@ const GalleryPage = () => {
               </h2>
             </motion.div>
 
-            {/* Category Filter */}
             <div className="flex justify-center gap-3 mb-10">
               {categories.map((cat) => (
                 <button
@@ -186,7 +211,6 @@ const GalleryPage = () => {
       </main>
       <Footer />
 
-      {/* Lightbox */}
       <AnimatePresence>
         {lightboxIndex !== null && (
           <motion.div
