@@ -2,21 +2,20 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 
 import grandFireplace from "@/assets/gallery/grand-fireplace-hardwood.jpg";
-import grandLiving from "@/assets/gallery/grand-living-columns.jpg";
-import fireplaceRoom from "@/assets/gallery/fireplace-living-room.jpg";
-import stoneArchway from "@/assets/gallery/stone-archway-staircase.jpg";
-import hallwayArches from "@/assets/gallery/hardwood-hallway-arches.jpg";
-import openFloor from "@/assets/gallery/open-floor-chandelier.jpg";
+import waterfrontAfterWide from "@/assets/gallery/waterfront-after-wide.jpg";
+import stairsAfterBottom from "@/assets/gallery/stairs-after-bottom.jpg";
+import waterfrontAfter from "@/assets/gallery/waterfront-after.jpg";
+import stairsBefore from "@/assets/gallery/stairs-before.jpg";
+import waterfrontBefore from "@/assets/gallery/waterfront-before.jpg";
 
-const galleryImages = [
-  { src: grandFireplace, alt: "Grand living room with fireplace and hardwood flooring", featured: true },
-  { src: grandLiving, alt: "Open floor plan with hardwood and stone columns", featured: true },
-  { src: fireplaceRoom, alt: "Living room with ornate fireplace and hardwood floors", featured: false },
-  { src: stoneArchway, alt: "Stone archway with hardwood flooring and staircase", featured: false },
-  { src: hallwayArches, alt: "Elegant hallway with hardwood flooring and stone arches", featured: false },
-  { src: openFloor, alt: "Spacious room with chandelier and hardwood flooring", featured: false },
+const featuredImages = [
+  { src: grandFireplace, alt: "Grand living room with fireplace and hardwood flooring" },
+  { src: waterfrontAfterWide, alt: "Waterfront home with new hardwood flooring" },
+  { src: stairsAfterBottom, alt: "Staircase with dark hardwood treads" },
+  { src: waterfrontAfter, alt: "Waterfront living room with hardwood floors" },
 ];
 
 const GallerySection = () => (
@@ -34,18 +33,16 @@ const GallerySection = () => (
         </h2>
       </motion.div>
 
-      {/* Masonry-style grid: 2 large + 4 smaller */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 auto-rows-[200px] md:auto-rows-[240px]">
-        {galleryImages.map((img, i) => (
+      {/* Featured photos grid */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 auto-rows-[200px] md:auto-rows-[260px] mb-12">
+        {featuredImages.map((img, i) => (
           <motion.div
             key={i}
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.08 }}
-            className={`rounded-xl overflow-hidden relative group ${
-              img.featured ? "col-span-2 row-span-2" : ""
-            }`}
+            className={`rounded-xl overflow-hidden relative group ${i < 2 ? "col-span-2 row-span-2" : ""}`}
           >
             <img
               src={img.src}
@@ -58,12 +55,38 @@ const GallerySection = () => (
         ))}
       </div>
 
+      {/* Before & After Preview */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="mb-12"
+      >
+        <h3 className="text-2xl font-heading font-bold text-foreground text-center mb-8">Before & After</h3>
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <BeforeAfterSlider
+            before={stairsBefore}
+            after={stairsAfterBottom}
+            beforeAlt="Worn stairs before renovation"
+            afterAlt="Beautiful dark hardwood stairs after"
+            label="Staircase Renovation"
+          />
+          <BeforeAfterSlider
+            before={waterfrontBefore}
+            after={waterfrontAfterWide}
+            beforeAlt="Living room with old carpet"
+            afterAlt="Living room with new hardwood"
+            label="Waterfront Home"
+          />
+        </div>
+      </motion.div>
+
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.3 }}
-        className="text-center mt-12"
+        className="text-center"
       >
         <Link to="/gallery">
           <Button variant="secondary" size="lg" className="group text-lg px-10 py-6 h-auto">
