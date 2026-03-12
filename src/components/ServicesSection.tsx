@@ -7,7 +7,7 @@ import laminateImg from "@/assets/gallery/waterfront-living-wide.jpg";
 
 const services = [
   {
-    image: heroRepair,
+    image: hardwoodImg,
     title: "Hardwood Flooring",
     href: "/services/hardwood-flooring",
     features: [
