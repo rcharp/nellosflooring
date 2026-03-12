@@ -1,7 +1,7 @@
 import { Percent, CreditCard, Search } from "lucide-react";
 import { motion } from "framer-motion";
 import { useQuoteModal } from "./QuoteModal";
-import offersBg from "@/assets/offers-bg.png";
+import offersBg from "@/assets/offers-bg-new.jpg";
 
 const offers = [
   {
