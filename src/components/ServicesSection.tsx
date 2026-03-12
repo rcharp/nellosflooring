@@ -63,7 +63,7 @@ const ServicesSection = () => (
       >
         <span className="text-base font-semibold text-primary uppercase tracking-wider">What We Do</span>
         <h2 className="font-heading text-4xl lg:text-5xl font-bold text-foreground mt-3">
-          Homeowners Across Florida Trust Us
+          Homeowners Across Manatee, Sarasota & Pinellas Counties Trust Nello's Flooring
         </h2>
         <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
           Complete flooring solutions for your home and business needs.
