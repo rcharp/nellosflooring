@@ -8,6 +8,8 @@ import grandFireplace from "@/assets/gallery/grand-fireplace-hardwood.jpg";
 import waterfrontAfterWide from "@/assets/gallery/waterfront-after-wide.jpg";
 import stairsAfterBottom from "@/assets/gallery/stairs-after-bottom.jpg";
 import waterfrontAfter from "@/assets/gallery/waterfront-after.jpg";
+import hallwayArches from "@/assets/gallery/hardwood-hallway-arches.jpg";
+import lightOakStairs from "@/assets/gallery/light-oak-stairs.jpg";
 import stairsBefore from "@/assets/gallery/stairs-before.jpg";
 import waterfrontBefore from "@/assets/gallery/waterfront-before.jpg";
 
@@ -16,6 +18,8 @@ const featuredImages = [
   { src: waterfrontAfterWide, alt: "Waterfront home with new hardwood flooring" },
   { src: stairsAfterBottom, alt: "Staircase with dark hardwood treads" },
   { src: waterfrontAfter, alt: "Waterfront living room with hardwood floors" },
+  { src: hallwayArches, alt: "Elegant hallway with hardwood flooring and stone arches" },
+  { src: lightOakStairs, alt: "Light oak staircase with white risers" },
 ];
 
 const GallerySection = () => (
