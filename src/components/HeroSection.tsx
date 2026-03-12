@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useQuoteModal } from "./QuoteModal";
 import QuoteForm from "./QuoteForm";
-import heroBg from "@/assets/hero-bg.png";
+import heroBg from "@/assets/hero-bg-new.jpg";
 
 const HeroSection = () => {
   const { openQuoteModal } = useQuoteModal();

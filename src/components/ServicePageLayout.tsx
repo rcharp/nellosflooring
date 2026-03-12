@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Phone, Check, ArrowRight, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
-import heroServices from "@/assets/hero-bg.png";
+import heroServices from "@/assets/hero-bg-new.jpg";
 import { useQuoteModal } from "@/components/QuoteModal";
 
 
