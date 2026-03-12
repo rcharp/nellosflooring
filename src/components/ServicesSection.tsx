@@ -40,7 +40,7 @@ const services = [
     ],
   },
   {
-    image: serviceDuct,
+    image: laminateImg,
     title: "Laminate Flooring",
     href: "/services/laminate-flooring",
     features: [
