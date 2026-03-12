@@ -29,7 +29,7 @@ const services = [
     ],
   },
   {
-    image: serviceMaintenance,
+    image: refinishImg,
     title: "Sand & Refinish",
     href: "/services/sand-and-refinish",
     features: [
