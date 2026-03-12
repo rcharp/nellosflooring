@@ -18,7 +18,7 @@ const services = [
     ],
   },
   {
-    image: heroInstall,
+    image: lvpImg,
     title: "Luxury Vinyl Plank",
     href: "/services/luxury-vinyl-plank",
     features: [
