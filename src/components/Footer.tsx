@@ -78,12 +78,6 @@ const Footer = () => (
       </div>
     </div>
 
-    {/* Chat Widget */}
-    <script
-      src="https://widgets.leadconnectorhq.com/loader.js"
-      data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
-      data-widget-id="69b1de1b330ef0cd0f38d3ed"
-    ></script>
   </footer>
 );
 
