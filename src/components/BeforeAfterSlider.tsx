@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
 
 interface BeforeAfterSliderProps {
   before: string;
@@ -10,8 +10,20 @@ interface BeforeAfterSliderProps {
 
 const BeforeAfterSlider = ({ before, after, beforeAlt, afterAlt, label }: BeforeAfterSliderProps) => {
   const [position, setPosition] = useState(50);
+  const [containerWidth, setContainerWidth] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
   const isDragging = useRef(false);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const observer = new ResizeObserver((entries) => {
+      setContainerWidth(entries[0].contentRect.width);
+    });
+    observer.observe(el);
+    setContainerWidth(el.offsetWidth);
+    return () => observer.disconnect();
+  }, []);
 
   const updatePosition = useCallback((clientX: number) => {
     if (!containerRef.current) return;
@@ -47,7 +59,7 @@ const BeforeAfterSlider = ({ before, after, beforeAlt, afterAlt, label }: Before
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
       >
-        {/* After image (full) */}
+        {/* After image (full background - right side) */}
         <img
           src={after}
           alt={afterAlt}
@@ -55,7 +67,7 @@ const BeforeAfterSlider = ({ before, after, beforeAlt, afterAlt, label }: Before
           draggable={false}
         />
 
-        {/* Before image (clipped) */}
+        {/* Before image (clipped - left side) */}
         <div
           className="absolute inset-0 overflow-hidden"
           style={{ width: `${position}%` }}
@@ -63,8 +75,8 @@ const BeforeAfterSlider = ({ before, after, beforeAlt, afterAlt, label }: Before
           <img
             src={before}
             alt={beforeAlt}
-            className="absolute inset-0 w-full h-full object-cover"
-            style={{ width: `${containerRef.current?.offsetWidth || 0}px`, maxWidth: "none" }}
+            className="absolute inset-0 h-full object-cover"
+            style={{ width: containerWidth > 0 ? `${containerWidth}px` : "100vw", maxWidth: "none" }}
             draggable={false}
           />
         </div>
@@ -74,7 +86,6 @@ const BeforeAfterSlider = ({ before, after, beforeAlt, afterAlt, label }: Before
           className="absolute top-0 bottom-0 w-0.5 bg-white shadow-lg z-10"
           style={{ left: `${position}%`, transform: "translateX(-50%)" }}
         >
-          {/* Handle */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-xl flex items-center justify-center">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="text-foreground">
               <path d="M7 4L3 10L7 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
