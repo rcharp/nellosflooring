@@ -94,7 +94,7 @@ const QuoteForm = ({ showHeader = true, compact = false, className = "", style }
     >
       {showHeader && (
         <div className={`text-center ${compact ? 'space-y-2 pb-1' : 'space-y-3 pb-2'}`}>
-          <img src={icon} alt="Nello's Flooring" className="w-16 h-16 mx-auto" />
+          
           <h2 className={`font-heading font-bold text-white ${compact ? 'text-2xl mt-1' : 'text-2xl'}`}>
             Get a Free Quote
           </h2>
