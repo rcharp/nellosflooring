@@ -67,7 +67,7 @@ const GallerySection = () => (
         className="mb-12"
       >
         <h3 className="text-2xl font-heading font-bold text-foreground text-center mb-8">Before & After</h3>
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           <BeforeAfterSlider
             before={stairsBefore}
             after={stairsAfterBottom}
