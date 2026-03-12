@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import QuoteForm from "@/components/QuoteForm";
-import heroServices from "@/assets/hero-services.jpg";
+import heroServices from "@/assets/hero-bg.png";
 import useSEO from "@/hooks/useSEO";
 
 const ContactPage = () => {

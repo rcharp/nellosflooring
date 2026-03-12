@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { ArrowRight, BookOpen, Clock } from "lucide-react";
-import heroServices from "@/assets/hero-services.jpg";
+import heroServices from "@/assets/hero-bg.png";
 import flooringTips from "@/data/hvacTips";
 import useSEO from "@/hooks/useSEO";
 
