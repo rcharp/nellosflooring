@@ -1,9 +1,9 @@
 import { ArrowRight, Check } from "lucide-react";
 import { motion } from "framer-motion";
-import heroRepair from "@/assets/service-repair-stock.jpg";
-import heroInstall from "@/assets/service-install-stock.jpg";
-import serviceMaintenance from "@/assets/service-maintenance-stock.jpg";
-import serviceDuct from "@/assets/service-duct-stock.jpg";
+import hardwoodImg from "@/assets/gallery/fireplace-living-room.jpg";
+import lvpImg from "@/assets/gallery/hotworx-lobby.jpg";
+import refinishImg from "@/assets/gallery/grand-fireplace-hardwood.jpg";
+import laminateImg from "@/assets/gallery/waterfront-living-wide.jpg";
 
 const services = [
   {
