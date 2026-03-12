@@ -5,7 +5,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
-import icon from "@/assets/icon.png";
+
 
 const WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/GIStSvIcFqux99Wx6sGI/webhook-trigger/70F0FsS8gJ6OHYIpZM0O";
 
