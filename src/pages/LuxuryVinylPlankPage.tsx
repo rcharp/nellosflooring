@@ -4,7 +4,7 @@ import useSEO from "@/hooks/useSEO";
 const LuxuryVinylPlankPage = () => {
   useSEO({
     title: "Luxury Vinyl Plank Installation | Nello's Flooring",
-    description: "Professional luxury vinyl plank (LVP) installation. Waterproof, durable, and beautiful. Over 40 years of experience. Call (727) 644-2305.",
+    description: "Professional luxury vinyl plank (LVP) installation. Waterproof, durable, and beautiful. Over 40 years of experience. Call (888) 244-4513.",
     canonical: "https://example.com/services/luxury-vinyl-plank",
   });
 

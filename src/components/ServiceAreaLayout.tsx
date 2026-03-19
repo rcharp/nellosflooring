@@ -88,12 +88,12 @@ const ServiceAreaPage = ({ city, tagline, intro }: ServiceAreaPageProps) => {
               <p className="text-lg text-primary-foreground/70 max-w-2xl mx-auto mt-6 leading-relaxed">{intro}</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
                 <a
-                  href="tel:+17276442305"
+                  href="tel:+18882444513"
                   className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold text-secondary border border-secondary hover:bg-secondary/10 transition-colors"
                   style={{ borderRadius: "10px" }}
                 >
                   <Phone className="w-5 h-5" />
-                  (727) 644-2305
+                  (888) 244-4513
                 </a>
                 <button
                   onClick={openQuoteModal}
@@ -173,12 +173,12 @@ const ServiceAreaPage = ({ city, tagline, intro }: ServiceAreaPageProps) => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+17276442305"
+                href="tel:+18882444513"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold text-secondary border border-secondary hover:bg-secondary/10 transition-colors"
                 style={{ borderRadius: "10px" }}
               >
                 <Phone className="w-5 h-5" />
-                (727) 644-2305
+                (888) 244-4513
               </a>
               <button
                 onClick={openQuoteModal}

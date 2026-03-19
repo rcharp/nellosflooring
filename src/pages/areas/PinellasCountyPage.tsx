@@ -4,7 +4,7 @@ import useSEO from "@/hooks/useSEO";
 const PinellasCountyPage = () => {
   useSEO({
     title: "Flooring Services Pinellas County | Nello's Flooring",
-    description: "Expert flooring services in Pinellas County. Hardwood, LVP, laminate installation, sand & refinish, and floor cleaning. Call (727) 644-2305.",
+    description: "Expert flooring services in Pinellas County. Hardwood, LVP, laminate installation, sand & refinish, and floor cleaning. Call (888) 244-4513.",
     canonical: "https://example.com/areas/pinellas-county",
   });
 
