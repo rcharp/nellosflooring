@@ -68,7 +68,7 @@ const AboutPage = () => {
                   I grew up in the flooring business, learning from my father as a young boy. I have always been in the flooring industry and through the years have expanded my knowledge and expertise within the industry.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  At Nello's Flooring, we're a family owned and operated business. My commitment is simple: expert craftsmanship, fair prices, and making sure you're completely satisfied with your new floors. When you call us, you're not just getting a contractor — you're getting a neighbor who cares about your home.
+                  At Nello's Flooring, we're a family owned and operated business. My commitment is simple: expert workmanship, fair prices, and making sure you're completely satisfied with your new floors. When you call us, you're not just getting a contractor — you're getting a neighbor who cares about your home.
                 </p>
               </motion.div>
             </div>

@@ -29,7 +29,7 @@ const HeroSection = () => {
             >
               <h1 className="font-heading text-[2.6rem] lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight text-primary-foreground text-center lg:text-left">
                 Beautiful Floors.{" "}
-                <span className="text-secondary-color">Expert Craftsmanship.</span>
+                <span className="text-secondary-color">Expert Workmanship.</span>
               </h1>
             </motion.div>
 

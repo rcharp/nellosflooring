@@ -34,7 +34,7 @@ const HardwoodFlooringPage = () => {
             "Over 40 years of experience in the flooring industry",
             "Fully insured for residential and commercial projects",
             "Family-owned and locally operated",
-            "Expert craftsmanship on every project",
+            "Expert workmanship on every project",
             "Upfront, transparent pricing — no hidden fees",
           ],
         },
