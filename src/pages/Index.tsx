@@ -16,7 +16,7 @@ const Index = () => {
   useSEO({
     title: "Nello's Flooring | Professional Flooring Services",
     description: "Nello's Flooring provides expert hardwood, luxury vinyl plank, laminate flooring installation, sand & refinish, and floor cleaning. Over 40 years of experience. Call (888) 244-4513.",
-    canonical: "https://example.com/",
+    canonical: "https://nellosflooring.lovable.app/",
   });
 
   return (
