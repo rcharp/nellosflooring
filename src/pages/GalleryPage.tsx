@@ -107,7 +107,7 @@ const GalleryPage = () => {
   useSEO({
     title: "Flooring Project Gallery | Nello's Flooring",
     description: "Browse photos of hardwood, LVP, and laminate flooring installations by Nello's Flooring. See our quality work firsthand.",
-    canonical: "https://example.com/gallery",
+    canonical: "https://nellosflooring.lovable.app/gallery",
   });
 
   const filtered = activeCategory === "All"

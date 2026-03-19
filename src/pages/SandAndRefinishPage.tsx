@@ -5,7 +5,7 @@ const SandAndRefinishPage = () => {
   useSEO({
     title: "Hardwood Sand & Refinish | Nello's Flooring",
     description: "Professional hardwood floor sanding and refinishing. Restore your floors to like-new condition. Over 40 years of experience. Call (888) 244-4513.",
-    canonical: "https://example.com/services/sand-and-refinish",
+    canonical: "https://nellosflooring.lovable.app/services/sand-and-refinish",
   });
 
   return (

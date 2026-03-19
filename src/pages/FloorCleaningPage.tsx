@@ -5,7 +5,7 @@ const FloorCleaningPage = () => {
   useSEO({
     title: "Floor Cleaning Services | Nello's Flooring",
     description: "Professional floor cleaning services. Keep your floors looking their best. Over 40 years of experience. Call (888) 244-4513.",
-    canonical: "https://example.com/services/floor-cleaning",
+    canonical: "https://nellosflooring.lovable.app/services/floor-cleaning",
   });
 
   return (

@@ -20,7 +20,7 @@ const HVACTipsPage = () => {
     title: "Flooring Tips & Guides | Nello's Flooring",
     description:
       "Expert flooring tips. Learn about hardwood care, flooring trends, installation advice, and when to refinish your floors.",
-    canonical: "https://example.com/tips",
+    canonical: "https://nellosflooring.lovable.app/tips",
   });
 
   return (
