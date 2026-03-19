@@ -18,7 +18,7 @@ const services = [
     items: [
       "Solid and engineered hardwood installation",
       "Wide variety of wood species and finishes",
-      "Expert craftsmanship for residential and commercial spaces",
+      "Expert workmanship for residential and commercial spaces",
     ],
   },
   {

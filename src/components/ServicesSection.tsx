@@ -13,7 +13,7 @@ const services = [
     features: [
       "Solid and engineered wood installation",
       "Wide variety of wood species and finishes",
-      "Expert craftsmanship for lasting beauty",
+      "Expert workmanship for lasting beauty",
       "Residential and commercial projects",
     ],
   },
