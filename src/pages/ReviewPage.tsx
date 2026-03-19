@@ -6,7 +6,7 @@ const ReviewPage = () => {
   useSEO({
     title: "Leave a Review | Nello's Flooring",
     description: "Share your experience with Nello's Flooring. Your feedback helps us improve and helps others find quality flooring service.",
-    canonical: "https://example.com/review",
+    canonical: "https://nellosflooring.lovable.app/review",
   });
 
   return (

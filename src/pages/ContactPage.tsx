@@ -10,7 +10,7 @@ const ContactPage = () => {
   useSEO({
     title: "Contact Us | Get a Free Quote | (888) 244-4513",
     description: "Contact Nello's Flooring for a free quote. Hardwood, LVP, laminate installation, sand & refinish. Call (888) 244-4513. Mon-Fri 8am-5pm.",
-    canonical: "https://example.com/contact",
+    canonical: "https://nellosflooring.lovable.app/contact",
   });
 
   return (

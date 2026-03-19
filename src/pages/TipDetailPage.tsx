@@ -17,7 +17,7 @@ const TipDetailPage = () => {
   useSEO({
     title: `${tip.title} | Nello's Flooring`,
     description: tip.excerpt,
-    canonical: `https://example.com/tips/${tip.slug}`,
+    canonical: `https://nellosflooring.lovable.app/tips/${tip.slug}`,
   });
 
   return (

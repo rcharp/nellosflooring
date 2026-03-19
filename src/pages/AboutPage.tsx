@@ -13,7 +13,7 @@ const AboutPage = () => {
   useSEO({
     title: "About Us | Nello's Flooring | Over 40 Years of Experience",
     description: "Learn about Nello's Flooring — family-owned flooring company with over 40 years of experience. Fully insured. Call (888) 244-4513.",
-    canonical: "https://example.com/about",
+    canonical: "https://nellosflooring.lovable.app/about",
   });
 
   return (
