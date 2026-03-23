@@ -161,7 +161,7 @@ const ServiceAreaPage = ({ city, tagline, intro }: ServiceAreaPageProps) => {
         </section>
 
         {/* CTA */}
-        <section className="py-16 relative overflow-hidden" style={{ backgroundColor: "#0f172a" }}>
+        <section className="py-16 relative overflow-hidden bg-primary">
           <div className="container mx-auto px-4 lg:px-8 text-center">
             <h2 className="font-heading text-3xl lg:text-4xl font-bold text-primary-foreground mb-4">
               Need Flooring Service in {city}?
