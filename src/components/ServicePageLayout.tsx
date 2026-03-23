@@ -46,8 +46,7 @@ const ServicePage = ({ title, subtitle, intro, sections, benefits }: ServicePage
                 </a>
                 <button
                   onClick={openQuoteModal}
-                  className="px-8 py-3 font-semibold hover:opacity-90 transition-opacity"
-                  style={{ backgroundColor: "#f59e0b", color: "#fff", borderRadius: "10px" }}
+                  className="px-8 py-3 font-semibold hover:opacity-90 transition-opacity bg-accent text-accent-foreground rounded-[10px]"
                 >
                   Get Free Quote
                 </button>
@@ -89,8 +88,7 @@ const ServicePage = ({ title, subtitle, intro, sections, benefits }: ServicePage
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="rounded-2xl p-8 lg:p-10 border border-secondary/30"
-                style={{ backgroundColor: "#0f172a" }}
+                className="rounded-2xl p-8 lg:p-10 border border-secondary/30 bg-primary"
               >
                 <h2 className="font-heading text-2xl lg:text-3xl font-bold text-primary-foreground mb-6">{benefits.heading}</h2>
                 <ul className="space-y-4">
@@ -160,7 +158,7 @@ const ServicePage = ({ title, subtitle, intro, sections, benefits }: ServicePage
         </section>
 
         {/* CTA */}
-        <section className="py-16 relative overflow-hidden" style={{ backgroundColor: "#0f172a" }}>
+        <section className="py-16 relative overflow-hidden bg-primary">
           <div className="container mx-auto px-4 lg:px-8 text-center">
             <h2 className="font-heading text-3xl lg:text-4xl font-bold text-primary-foreground mb-4">Ready to Get Started?</h2>
             <p className="text-primary-foreground/70 mb-8 max-w-xl mx-auto">
@@ -177,8 +175,7 @@ const ServicePage = ({ title, subtitle, intro, sections, benefits }: ServicePage
               </a>
               <button
                 onClick={openQuoteModal}
-                className="px-8 py-3 font-semibold hover:opacity-90 transition-opacity"
-                style={{ backgroundColor: "#f59e0b", color: "#fff", borderRadius: "10px" }}
+                className="px-8 py-3 font-semibold hover:opacity-90 transition-opacity bg-accent text-accent-foreground rounded-[10px]"
               >
                 Get Free Quote
               </button>

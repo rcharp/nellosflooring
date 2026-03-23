@@ -69,12 +69,8 @@ const QuoteForm = ({ showHeader = true, compact = false, className = "", style }
   if (isSubmitted) {
     return (
       <div
-        className={`rounded-2xl border-2 ${compact ? 'p-5' : 'p-8'} shadow-2xl flex flex-col items-center justify-center text-center ${compact ? 'min-h-[300px]' : 'min-h-[400px]'} ${className}`}
-        style={{
-          backgroundColor: "#0f172a",
-          borderColor: "#3b82f6",
-          ...style,
-        }}
+        className={`rounded-2xl border-2 border-secondary ${compact ? 'p-5' : 'p-8'} shadow-2xl flex flex-col items-center justify-center text-center ${compact ? 'min-h-[300px]' : 'min-h-[400px]'} bg-primary ${className}`}
+        style={style}
       >
         <h2 className="font-heading font-bold text-white text-3xl mb-4">THANK YOU!</h2>
         <p className="text-white/80 text-lg">We got your request and will be in touch shortly!</p>
@@ -85,12 +81,8 @@ const QuoteForm = ({ showHeader = true, compact = false, className = "", style }
   return (
     <form
       onSubmit={handleSubmit}
-      className={`rounded-2xl border-2 ${compact ? 'p-5 space-y-3' : 'p-8 space-y-6'} shadow-2xl ${className}`}
-      style={{
-        backgroundColor: "#0f172a",
-        borderColor: "#3b82f6",
-        ...style,
-      }}
+      className={`rounded-2xl border-2 border-secondary ${compact ? 'p-5 space-y-3' : 'p-8 space-y-6'} shadow-2xl bg-primary ${className}`}
+      style={style}
     >
       {showHeader && (
         <div className={`text-center ${compact ? 'space-y-2 pb-1' : 'space-y-3 pb-2'}`}>
@@ -196,8 +188,7 @@ const QuoteForm = ({ showHeader = true, compact = false, className = "", style }
       <Button
         type="submit"
         disabled={isSubmitting}
-        className={`w-full font-bold ${compact ? 'text-base py-4' : 'text-lg py-6'} hover:opacity-90 transition-opacity`}
-        style={{ backgroundColor: "#f59e0b", color: "#fff", borderRadius: "10px" }}
+        className={`w-full font-bold ${compact ? 'text-base py-4' : 'text-lg py-6'} hover:opacity-90 transition-opacity bg-accent text-accent-foreground rounded-[10px]`}
       >
         {isSubmitting ? "Sending..." : "Get Free Quote"}
       </Button>

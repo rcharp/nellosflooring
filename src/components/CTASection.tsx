@@ -32,8 +32,7 @@ const CTASection = () => {
             </a>
             <button
               onClick={openQuoteModal}
-              className="inline-flex items-center gap-2 px-8 py-4 font-semibold hover:opacity-90 transition-opacity"
-              style={{ backgroundColor: "#f59e0b", color: "#fff", borderRadius: "10px" }}
+              className="inline-flex items-center gap-2 px-8 py-4 font-semibold hover:opacity-90 transition-opacity bg-accent text-accent-foreground rounded-[10px]"
             >
               Get Free Quote
             </button>
