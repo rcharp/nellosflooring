@@ -69,12 +69,8 @@ const QuoteForm = ({ showHeader = true, compact = false, className = "", style }
   if (isSubmitted) {
     return (
       <div
-        className={`rounded-2xl border-2 ${compact ? 'p-5' : 'p-8'} shadow-2xl flex flex-col items-center justify-center text-center ${compact ? 'min-h-[300px]' : 'min-h-[400px]'} ${className}`}
-        style={{
-          backgroundColor: "#0f172a",
-          borderColor: "#3b82f6",
-          ...style,
-        }}
+        className={`rounded-2xl border-2 border-secondary ${compact ? 'p-5' : 'p-8'} shadow-2xl flex flex-col items-center justify-center text-center ${compact ? 'min-h-[300px]' : 'min-h-[400px]'} bg-primary ${className}`}
+        style={style}
       >
         <h2 className="font-heading font-bold text-white text-3xl mb-4">THANK YOU!</h2>
         <p className="text-white/80 text-lg">We got your request and will be in touch shortly!</p>
