@@ -188,8 +188,7 @@ const QuoteForm = ({ showHeader = true, compact = false, className = "", style }
       <Button
         type="submit"
         disabled={isSubmitting}
-        className={`w-full font-bold ${compact ? 'text-base py-4' : 'text-lg py-6'} hover:opacity-90 transition-opacity`}
-        style={{ backgroundColor: "#f59e0b", color: "#fff", borderRadius: "10px" }}
+        className={`w-full font-bold ${compact ? 'text-base py-4' : 'text-lg py-6'} hover:opacity-90 transition-opacity bg-accent text-accent-foreground rounded-[10px]`}
       >
         {isSubmitting ? "Sending..." : "Get Free Quote"}
       </Button>

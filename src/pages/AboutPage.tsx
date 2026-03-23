@@ -76,7 +76,7 @@ const AboutPage = () => {
         </section>
 
         {/* What We Do */}
-        <section className="py-16 lg:py-24" style={{ backgroundColor: "#0f172a" }}>
+        <section className="py-16 lg:py-24 bg-primary">
           <div className="container mx-auto px-4 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
               <motion.div

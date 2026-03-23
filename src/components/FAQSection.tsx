@@ -34,7 +34,7 @@ const faqs = [
 ];
 
 const FAQSection = () => (
-  <section className="py-20 lg:py-28" style={{ backgroundColor: "#0f172a" }}>
+  <section className="py-20 lg:py-28 bg-primary">
     <div className="container mx-auto px-4 lg:px-8 max-w-3xl">
       <motion.div
         initial={{ opacity: 0, y: 20 }}

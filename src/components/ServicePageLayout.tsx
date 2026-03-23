@@ -175,8 +175,7 @@ const ServicePage = ({ title, subtitle, intro, sections, benefits }: ServicePage
               </a>
               <button
                 onClick={openQuoteModal}
-                className="px-8 py-3 font-semibold hover:opacity-90 transition-opacity"
-                style={{ backgroundColor: "#f59e0b", color: "#fff", borderRadius: "10px" }}
+                className="px-8 py-3 font-semibold hover:opacity-90 transition-opacity bg-accent text-accent-foreground rounded-[10px]"
               >
                 Get Free Quote
               </button>
