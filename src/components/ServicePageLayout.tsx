@@ -158,7 +158,7 @@ const ServicePage = ({ title, subtitle, intro, sections, benefits }: ServicePage
         </section>
 
         {/* CTA */}
-        <section className="py-16 relative overflow-hidden" style={{ backgroundColor: "#0f172a" }}>
+        <section className="py-16 relative overflow-hidden bg-primary">
           <div className="container mx-auto px-4 lg:px-8 text-center">
             <h2 className="font-heading text-3xl lg:text-4xl font-bold text-primary-foreground mb-4">Ready to Get Started?</h2>
             <p className="text-primary-foreground/70 mb-8 max-w-xl mx-auto">
