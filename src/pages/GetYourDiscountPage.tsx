@@ -9,7 +9,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import useSEO from "@/hooks/useSEO";
 
-const WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/c53B26PcZFpdhgC5tp5U/webhook-trigger/e8749160-3bed-4907-b830-876154df7502";
+const WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/GIStSvIcFqux99Wx6sGI/webhook-trigger/2cecea0b-20f0-433c-88da-5bbc72d9e2c0";
 
 const GetYourDiscountPage = () => {
   useSEO({
