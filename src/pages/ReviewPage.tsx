@@ -35,7 +35,7 @@ const ReviewPage = () => {
   const handleRating = (stars: number) => {
     setSelectedRating(stars);
     if (stars >= 4) {
-      setShowRedirect(true);
+      window.location.href = GOOGLE_REVIEW_URL;
     } else {
       setView("feedback");
     }
