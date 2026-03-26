@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Star, ArrowLeft, ExternalLink } from "lucide-react";
+import { Star, ArrowLeft } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
