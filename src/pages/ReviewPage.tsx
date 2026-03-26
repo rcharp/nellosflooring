@@ -33,7 +33,7 @@ const ReviewPage = () => {
   const handleRating = (stars: number) => {
     setSelectedRating(stars);
     if (stars >= 4) {
-      window.open(GOOGLE_REVIEW_URL, "_blank");
+      setView("redirect");
     } else {
       setView("feedback");
     }
