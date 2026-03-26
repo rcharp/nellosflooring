@@ -51,6 +51,7 @@ const App = () => (
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/tips" element={<HVACTipsPage />} />
             <Route path="/tips/:slug" element={<TipDetailPage />} />
+            <Route path="/get-your-discount" element={<GetYourDiscountPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </QuoteModalProvider>
