@@ -200,33 +200,6 @@ const ReviewPage = () => {
           )}
         </div>
       </div>
-
-      <Dialog open={showRedirect} onOpenChange={setShowRedirect}>
-        <DialogContent className="sm:max-w-md text-center space-y-4">
-          <div className="flex justify-center gap-1 pt-2">
-            {Array.from({ length: 5 }).map((_, i) => (
-              <Star
-                key={i}
-                className={`w-7 h-7 ${
-                  i < selectedRating ? "fill-yellow-400 text-yellow-400" : "fill-muted text-muted"
-                }`}
-              />
-            ))}
-          </div>
-          <h2 className="font-heading text-2xl font-bold text-foreground">Thank you!</h2>
-          <p className="text-muted-foreground text-sm">
-            We'd love for you to share your experience on Google so others can find us too!
-          </p>
-          <Button
-            asChild
-            className="w-full py-6 text-lg font-bold rounded-full gap-2"
-          >
-            <a href={GOOGLE_REVIEW_URL} target="_blank" rel="noopener noreferrer">
-              Leave a Google Review <ExternalLink className="w-5 h-5" />
-            </a>
-          </Button>
-        </DialogContent>
-      </Dialog>
     </div>
   );
 };
