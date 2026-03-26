@@ -35,7 +35,7 @@ const ReviewPage = () => {
   const handleRating = (stars: number) => {
     setSelectedRating(stars);
     if (stars >= 4) {
-      setView("redirect");
+      setShowRedirect(true);
     } else {
       setView("feedback");
     }
