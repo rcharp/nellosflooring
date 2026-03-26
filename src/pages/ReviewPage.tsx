@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { toast } from "sonner";
 import useSEO from "@/hooks/useSEO";
 
@@ -25,7 +26,8 @@ const ReviewPage = () => {
     canonical: "https://nellosflooring.lovable.app/review",
   });
 
-  const [view, setView] = useState<"rating" | "redirect" | "feedback" | "thanks">("rating");
+  const [view, setView] = useState<"rating" | "feedback" | "thanks">("rating");
+  const [showRedirect, setShowRedirect] = useState(false);
   const [selectedRating, setSelectedRating] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({ name: "", phone: "", message: "" });
@@ -33,7 +35,7 @@ const ReviewPage = () => {
   const handleRating = (stars: number) => {
     setSelectedRating(stars);
     if (stars >= 4) {
-      setView("redirect");
+      setShowRedirect(true);
     } else {
       setView("feedback");
     }
@@ -110,48 +112,6 @@ const ReviewPage = () => {
                   </button>
                 ))}
               </div>
-            </div>
-          </div>
-
-          {/* Redirect Prompt View */}
-          <div
-            className={`transition-all duration-500 ease-in-out ${
-              view === "redirect"
-                ? "translate-x-0 opacity-100"
-                : "translate-x-full opacity-0 absolute inset-0 pointer-events-none"
-            }`}
-          >
-            <div className="bg-card rounded-2xl border border-border shadow-lg p-8 md:p-12 text-center space-y-6">
-              <div className="flex justify-center gap-1">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star
-                    key={i}
-                    className={`w-8 h-8 ${
-                      i < selectedRating ? "fill-yellow-400 text-yellow-400" : "fill-muted text-muted"
-                    }`}
-                  />
-                ))}
-              </div>
-              <div className="space-y-2">
-                <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
-                  Thank you!
-                </h2>
-                <p className="text-muted-foreground">
-                  We'd love for you to share your experience on Google so others can find us too!
-                </p>
-              </div>
-              <Button
-                onClick={() => window.open(GOOGLE_REVIEW_URL, "_blank")}
-                className="w-full py-6 text-lg font-bold rounded-full gap-2"
-              >
-                Leave a Google Review <ExternalLink className="w-5 h-5" />
-              </Button>
-              <button
-                onClick={() => setView("rating")}
-                className="flex items-center gap-1 mx-auto text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
-                <ArrowLeft className="w-4 h-4" /> Back to ratings
-              </button>
             </div>
           </div>
 
@@ -240,6 +200,33 @@ const ReviewPage = () => {
           )}
         </div>
       </div>
+
+      <Dialog open={showRedirect} onOpenChange={setShowRedirect}>
+        <DialogContent className="sm:max-w-md text-center space-y-4">
+          <div className="flex justify-center gap-1 pt-2">
+            {Array.from({ length: 5 }).map((_, i) => (
+              <Star
+                key={i}
+                className={`w-7 h-7 ${
+                  i < selectedRating ? "fill-yellow-400 text-yellow-400" : "fill-muted text-muted"
+                }`}
+              />
+            ))}
+          </div>
+          <h2 className="font-heading text-2xl font-bold text-foreground">Thank you!</h2>
+          <p className="text-muted-foreground text-sm">
+            We'd love for you to share your experience on Google so others can find us too!
+          </p>
+          <Button
+            asChild
+            className="w-full py-6 text-lg font-bold rounded-full gap-2"
+          >
+            <a href={GOOGLE_REVIEW_URL} target="_blank" rel="noopener noreferrer">
+              Leave a Google Review <ExternalLink className="w-5 h-5" />
+            </a>
+          </Button>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
