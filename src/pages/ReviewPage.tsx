@@ -113,6 +113,48 @@ const ReviewPage = () => {
             </div>
           </div>
 
+          {/* Redirect Prompt View */}
+          <div
+            className={`transition-all duration-500 ease-in-out ${
+              view === "redirect"
+                ? "translate-x-0 opacity-100"
+                : "translate-x-full opacity-0 absolute inset-0 pointer-events-none"
+            }`}
+          >
+            <div className="bg-card rounded-2xl border border-border shadow-lg p-8 md:p-12 text-center space-y-6">
+              <div className="flex justify-center gap-1">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star
+                    key={i}
+                    className={`w-8 h-8 ${
+                      i < selectedRating ? "fill-yellow-400 text-yellow-400" : "fill-muted text-muted"
+                    }`}
+                  />
+                ))}
+              </div>
+              <div className="space-y-2">
+                <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
+                  Thank you!
+                </h2>
+                <p className="text-muted-foreground">
+                  We'd love for you to share your experience on Google so others can find us too!
+                </p>
+              </div>
+              <Button
+                onClick={() => window.open(GOOGLE_REVIEW_URL, "_blank")}
+                className="w-full py-6 text-lg font-bold rounded-full gap-2"
+              >
+                Leave a Google Review <ExternalLink className="w-5 h-5" />
+              </Button>
+              <button
+                onClick={() => setView("rating")}
+                className="flex items-center gap-1 mx-auto text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <ArrowLeft className="w-4 h-4" /> Back to ratings
+              </button>
+            </div>
+          </div>
+
           {/* Feedback Form View */}
           <div
             className={`transition-all duration-500 ease-in-out ${
