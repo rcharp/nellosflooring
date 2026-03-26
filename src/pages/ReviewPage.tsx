@@ -84,7 +84,7 @@ const ReviewPage = () => {
                 <h1 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
                   How was your experience?
                 </h1>
-                <p className="text-muted-foreground">We'd love to hear your feedback</p>
+                <p className="text-muted-foreground">Select a rating to leave us a review on Google</p>
               </div>
 
               <div className="space-y-3">
