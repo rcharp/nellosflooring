@@ -20,6 +20,7 @@ import ContactPage from "./pages/ContactPage";
 import QuotePage from "./pages/QuotePage";
 import HVACTipsPage from "./pages/HVACTipsPage";
 import TipDetailPage from "./pages/TipDetailPage";
+import GetYourDiscountPage from "./pages/GetYourDiscountPage";
 import NotFound from "./pages/NotFound";
 
 
