@@ -25,7 +25,7 @@ const ReviewPage = () => {
     canonical: "https://nellosflooring.lovable.app/review",
   });
 
-  const [view, setView] = useState<"rating" | "feedback" | "thanks">("rating");
+  const [view, setView] = useState<"rating" | "redirect" | "feedback" | "thanks">("rating");
   const [selectedRating, setSelectedRating] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({ name: "", phone: "", message: "" });
