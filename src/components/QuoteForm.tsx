@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
@@ -19,16 +18,15 @@ const QuoteForm = ({ showHeader = true, compact = false, className = "", style }
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     fullName: "",
+    email: "",
     phone: "",
     helpWith: "",
-    consentMarketing: false,
-    consentNonMarketing: false,
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!formData.fullName.trim() || !formData.phone.trim() || !formData.helpWith.trim()) {
+    if (!formData.fullName.trim() || !formData.email.trim() || !formData.phone.trim() || !formData.helpWith.trim()) {
       toast.error("Please fill in all required fields.");
       return;
     }
@@ -36,28 +34,44 @@ const QuoteForm = ({ showHeader = true, compact = false, className = "", style }
       toast.error("Please enter a valid 10-digit phone number.");
       return;
     }
-    if (!formData.consentMarketing || !formData.consentNonMarketing) {
-      toast.error("Please accept both consent checkboxes.");
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      toast.error("Please enter a valid email address.");
       return;
     }
 
     setIsSubmitting(true);
 
     try {
-      const idempotencyKey = `quote-${Date.now()}-${Math.random().toString(36).slice(2)}`;
-      const { error } = await supabase.functions.invoke('send-transactional-email', {
-        body: {
-          templateName: 'quote-notification',
-          recipientEmail: 'rickycharpentier@gmail.com',
-          idempotencyKey,
-          templateData: {
-            fullName: formData.fullName.trim(),
-            phone: formData.phone.trim(),
-            helpWith: formData.helpWith.trim(),
+      const idempotencyBase = `quote-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+
+      // Send notification to business owner and confirmation to customer in parallel
+      const [ownerResult, customerResult] = await Promise.all([
+        supabase.functions.invoke('send-transactional-email', {
+          body: {
+            templateName: 'quote-notification',
+            idempotencyKey: `${idempotencyBase}-owner`,
+            templateData: {
+              fullName: formData.fullName.trim(),
+              email: formData.email.trim(),
+              phone: formData.phone.trim(),
+              helpWith: formData.helpWith.trim(),
+            },
           },
-        },
-      });
-      if (error) throw error;
+        }),
+        supabase.functions.invoke('send-transactional-email', {
+          body: {
+            templateName: 'quote-confirmation',
+            recipientEmail: formData.email.trim(),
+            idempotencyKey: `${idempotencyBase}-customer`,
+            templateData: {
+              fullName: formData.fullName.trim(),
+            },
+          },
+        }),
+      ]);
+
+      if (ownerResult.error) throw ownerResult.error;
+      if (customerResult.error) throw customerResult.error;
 
       setIsSubmitted(true);
     } catch {
@@ -87,7 +101,6 @@ const QuoteForm = ({ showHeader = true, compact = false, className = "", style }
     >
       {showHeader && (
         <div className={`text-center ${compact ? 'space-y-2 pb-1' : 'space-y-3 pb-2'}`}>
-          
           <h2 className={`font-heading font-bold text-white ${compact ? 'text-3xl mt-1' : 'text-4xl'}`}>
             Get a Free Quote
           </h2>
@@ -105,6 +118,22 @@ const QuoteForm = ({ showHeader = true, compact = false, className = "", style }
           maxLength={100}
           value={formData.fullName}
           onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+          className="bg-white/10 border-white/20 text-white placeholder:text-white/50"
+        />
+      </div>
+
+      <div className={compact ? "space-y-1" : "space-y-2"}>
+        <Label htmlFor="email" className="text-white font-semibold">
+          Email <span className="text-secondary">*</span>
+        </Label>
+        <Input
+          id="email"
+          type="email"
+          placeholder="john@example.com"
+          required
+          maxLength={200}
+          value={formData.email}
+          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
           className="bg-white/10 border-white/20 text-white placeholder:text-white/50"
         />
       </div>
@@ -144,48 +173,6 @@ const QuoteForm = ({ showHeader = true, compact = false, className = "", style }
         />
       </div>
 
-      <div className="flex items-start gap-3">
-        <Checkbox
-          id="consentMarketing"
-          checked={formData.consentMarketing}
-          onCheckedChange={(checked) =>
-            setFormData({ ...formData, consentMarketing: checked === true })
-          }
-          className="mt-1 border-white/30 data-[state=checked]:bg-secondary data-[state=checked]:border-secondary"
-        />
-        <Label
-          htmlFor="consentMarketing"
-          className="text-white/70 text-xs leading-relaxed font-normal cursor-pointer"
-        >
-          I consent to receive marketing text messages from Nello's Flooring at the
-          phone number provided. Consent is not a condition of purchase. Message
-          frequency may vary. Message &amp; data rates may apply. Text HELP for
-          assistance, reply STOP to opt out.
-        </Label>
-      </div>
-
-      <div className="flex items-start gap-3">
-        <Checkbox
-          id="consentNonMarketing"
-          checked={formData.consentNonMarketing}
-          onCheckedChange={(checked) =>
-            setFormData({ ...formData, consentNonMarketing: checked === true })
-          }
-          className="mt-1 border-white/30 data-[state=checked]:bg-secondary data-[state=checked]:border-secondary"
-        />
-        <Label
-          htmlFor="consentNonMarketing"
-          className="text-white/70 text-xs leading-relaxed font-normal cursor-pointer"
-        >
-          I consent to receive non-marketing text messages from Nello's Flooring
-          regarding appointment confirmations and reminders, customer support
-          updates, and service-related follow-ups at the phone number provided.
-          Consent is not a condition of purchase. Message frequency may vary.
-          Message &amp; data rates may apply. Text HELP for assistance, reply STOP
-          to opt out.
-        </Label>
-      </div>
-
       <Button
         type="submit"
         disabled={isSubmitting}
@@ -193,6 +180,10 @@ const QuoteForm = ({ showHeader = true, compact = false, className = "", style }
       >
         {isSubmitting ? "Sending..." : "Get Free Quote"}
       </Button>
+
+      <p className="text-white/50 text-xs text-center leading-relaxed">
+        By submitting this form, you agree to our Terms &amp; Conditions and Privacy Policy. You consent to receive emails, calls, and text messages from Nello's Flooring regarding your inquiry. Message &amp; data rates may apply. You may opt out at any time.
+      </p>
     </form>
   );
 };

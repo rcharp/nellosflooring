@@ -8,11 +8,12 @@ const SITE_NAME = "Nello's Flooring"
 
 interface QuoteNotificationProps {
   fullName?: string
+  email?: string
   phone?: string
   helpWith?: string
 }
 
-const QuoteNotificationEmail = ({ fullName, phone, helpWith }: QuoteNotificationProps) => (
+const QuoteNotificationEmail = ({ fullName, email, phone, helpWith }: QuoteNotificationProps) => (
   <Html lang="en" dir="ltr">
     <Head />
     <Preview>New quote request from {fullName || 'a customer'}</Preview>
@@ -24,6 +25,8 @@ const QuoteNotificationEmail = ({ fullName, phone, helpWith }: QuoteNotification
         <Section style={detailSection}>
           <Text style={label}>Name</Text>
           <Text style={value}>{fullName || 'Not provided'}</Text>
+          <Text style={label}>Email</Text>
+          <Text style={value}>{email || 'Not provided'}</Text>
           <Text style={label}>Phone</Text>
           <Text style={value}>{phone || 'Not provided'}</Text>
           <Text style={label}>What they need help with</Text>
@@ -41,7 +44,7 @@ export const template = {
   subject: (data: Record<string, any>) => `New Quote Request from ${data.fullName || 'a customer'}`,
   to: 'rickycharpentier@gmail.com',
   displayName: 'Quote notification',
-  previewData: { fullName: 'John Smith', phone: '7271234567', helpWith: 'I need new hardwood floors installed in my living room.' },
+  previewData: { fullName: 'John Smith', email: 'john@example.com', phone: '7271234567', helpWith: 'I need new hardwood floors installed in my living room.' },
 } satisfies TemplateEntry
 
 const main = { backgroundColor: '#ffffff', fontFamily: "'Montserrat', Arial, sans-serif" }
