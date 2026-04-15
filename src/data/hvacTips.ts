@@ -94,7 +94,7 @@ const flooringTips: HVACTip[] = [
       "3. Gray or black areas: When wood turns gray or black, moisture has penetrated past the finish into the wood itself. This needs immediate attention before permanent damage occurs.",
       "4. The water test: Sprinkle a few drops of water on your floor. If the water beads up, your finish is still intact. If it soaks in within a few minutes, your finish has worn through and needs attention.",
       "5. It's been 7-10 years: Even if your floors look okay, most hardwood floors should be refinished every 7-10 years as preventive maintenance. This is much cheaper than waiting until damage requires board replacement.",
-      "Nello's Flooring specializes in professional sand and refinish services. We use dustless sanding technology and premium finishes to restore your floors to like-new condition. Call (888) 244-4513 for a free assessment.",
+      "Nello's Flooring specializes in professional sand and refinish services. We use dustless sanding technology and premium finishes to restore your floors to like-new condition. Call (727) 644-2305 for a free assessment.",
     ],
     relatedServices: [
       { label: "Sand & Refinish", href: "/services/sand-and-refinish" },

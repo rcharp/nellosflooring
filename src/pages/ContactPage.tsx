@@ -8,8 +8,8 @@ import useSEO from "@/hooks/useSEO";
 
 const ContactPage = () => {
   useSEO({
-    title: "Contact Us | Get a Free Quote | (888) 244-4513",
-    description: "Contact Nello's Flooring for a free quote. Hardwood, LVP, laminate installation, sand & refinish. Call (888) 244-4513. Mon-Fri 8am-5pm.",
+    title: "Contact Us | Get a Free Quote | (727) 644-2305",
+    description: "Contact Nello's Flooring for a free quote. Hardwood, LVP, laminate installation, sand & refinish. Call (727) 644-2305. Mon-Fri 8am-5pm.",
     canonical: "https://nellosflooring.lovable.app/contact",
   });
 
@@ -64,8 +64,8 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <h3 className="font-heading font-semibold text-foreground mb-1">Phone</h3>
-                      <a href="tel:+18882444513" className="text-muted-foreground hover:text-secondary transition-colors">
-                        (888) 244-4513
+                      <a href="tel:+17276442305" className="text-muted-foreground hover:text-secondary transition-colors">
+                        (727) 644-2305
                       </a>
                     </div>
                   </div>
