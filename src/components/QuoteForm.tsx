@@ -46,15 +46,16 @@ const QuoteForm = ({ showHeader = true, compact = false, className = "", style }
     setIsSubmitting(true);
 
     try {
-      await fetch(WEBHOOK_URL, {
+      await fetch(FORM_ENDPOINT, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
         body: JSON.stringify({
           full_name: formData.fullName.trim(),
           phone: formData.phone.trim(),
           help_with: formData.helpWith.trim(),
           consent_marketing: formData.consentMarketing,
           consent_non_marketing: formData.consentNonMarketing,
+          _subject: `New Quote Request from ${formData.fullName.trim()}`,
         }),
       });
 
