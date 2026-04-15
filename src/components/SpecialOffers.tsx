@@ -1,4 +1,4 @@
-import { Percent, CreditCard, Search } from "lucide-react";
+import { Percent, Zap, Search } from "lucide-react";
 import { motion } from "framer-motion";
 import { useQuoteModal } from "./QuoteModal";
 import offersBg from "@/assets/offers-bg-new.jpg";
@@ -10,9 +10,9 @@ const offers = [
     description: "Get 20% off on floor refinishing and 10% off on new flooring installations.",
   },
   {
-    icon: CreditCard,
-    title: "Financing Options Available",
-    description: "Get the floors you love now, pay over time. Flexible plans, quick approval.",
+    icon: Zap,
+    title: "Fast & Friendly Service",
+    description: "We work efficiently and treat your home with care — quality results, on time, every time.",
   },
   {
     icon: Search,
