@@ -4,7 +4,7 @@ import useSEO from "@/hooks/useSEO";
 const FloorCleaningPage = () => {
   useSEO({
     title: "Floor Cleaning Services | Nello's Flooring",
-    description: "Professional floor cleaning services. Keep your floors looking their best. Over 40 years of experience. Call (888) 244-4513.",
+    description: "Professional floor cleaning services. Keep your floors looking their best. Over 40 years of experience. Call (727) 644-2305.",
     canonical: "https://nellosflooring.lovable.app/services/floor-cleaning",
   });
 

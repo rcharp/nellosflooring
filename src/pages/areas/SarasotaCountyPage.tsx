@@ -4,7 +4,7 @@ import useSEO from "@/hooks/useSEO";
 const SarasotaCountyPage = () => {
   useSEO({
     title: "Flooring Services Sarasota County | Nello's Flooring",
-    description: "Professional flooring services in Sarasota County. Hardwood, LVP, laminate installation, sand & refinish, and floor cleaning. Call (888) 244-4513.",
+    description: "Professional flooring services in Sarasota County. Hardwood, LVP, laminate installation, sand & refinish, and floor cleaning. Call (727) 644-2305.",
     canonical: "https://nellosflooring.lovable.app/areas/sarasota-county",
   });
 

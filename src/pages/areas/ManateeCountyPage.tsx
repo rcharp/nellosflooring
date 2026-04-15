@@ -4,7 +4,7 @@ import useSEO from "@/hooks/useSEO";
 const ManateeCountyPage = () => {
   useSEO({
     title: "Flooring Services Manatee County | Nello's Flooring",
-    description: "Expert flooring services in Manatee County. Hardwood, LVP, laminate installation, sand & refinish, and floor cleaning. Call (888) 244-4513.",
+    description: "Expert flooring services in Manatee County. Hardwood, LVP, laminate installation, sand & refinish, and floor cleaning. Call (727) 644-2305.",
     canonical: "https://nellosflooring.lovable.app/areas/manatee-county",
   });
 

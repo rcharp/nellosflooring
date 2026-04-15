@@ -4,7 +4,7 @@ import useSEO from "@/hooks/useSEO";
 const LaminateFlooringPage = () => {
   useSEO({
     title: "Laminate Flooring Installation | Nello's Flooring",
-    description: "Professional laminate flooring installation. Affordable, stylish, and durable. Over 40 years of experience. Call (888) 244-4513.",
+    description: "Professional laminate flooring installation. Affordable, stylish, and durable. Over 40 years of experience. Call (727) 644-2305.",
     canonical: "https://nellosflooring.lovable.app/services/laminate-flooring",
   });
 
