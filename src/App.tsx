@@ -21,6 +21,7 @@ import QuotePage from "./pages/QuotePage";
 import HVACTipsPage from "./pages/HVACTipsPage";
 import TipDetailPage from "./pages/TipDetailPage";
 import GetYourDiscountPage from "./pages/GetYourDiscountPage";
+import UnsubscribePage from "./pages/UnsubscribePage";
 import NotFound from "./pages/NotFound";
 
 
@@ -52,6 +53,7 @@ const App = () => (
             <Route path="/tips" element={<HVACTipsPage />} />
             <Route path="/tips/:slug" element={<TipDetailPage />} />
             <Route path="/get-your-discount" element={<GetYourDiscountPage />} />
+            <Route path="/unsubscribe" element={<UnsubscribePage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </QuoteModalProvider>

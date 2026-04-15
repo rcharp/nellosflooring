@@ -5,9 +5,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
-
-
-const FORM_ENDPOINT = "https://formsubmit.co/ajax/rickycharpentier@gmail.com";
+import { supabase } from "@/integrations/supabase/client";
 
 interface QuoteFormProps {
   showHeader?: boolean;
@@ -46,18 +44,20 @@ const QuoteForm = ({ showHeader = true, compact = false, className = "", style }
     setIsSubmitting(true);
 
     try {
-      await fetch(FORM_ENDPOINT, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", "Accept": "application/json" },
-        body: JSON.stringify({
-          full_name: formData.fullName.trim(),
-          phone: formData.phone.trim(),
-          help_with: formData.helpWith.trim(),
-          consent_marketing: formData.consentMarketing,
-          consent_non_marketing: formData.consentNonMarketing,
-          _subject: `New Quote Request from ${formData.fullName.trim()}`,
-        }),
+      const idempotencyKey = `quote-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+      const { error } = await supabase.functions.invoke('send-transactional-email', {
+        body: {
+          templateName: 'quote-notification',
+          recipientEmail: 'rickycharpentier@gmail.com',
+          idempotencyKey,
+          templateData: {
+            fullName: formData.fullName.trim(),
+            phone: formData.phone.trim(),
+            helpWith: formData.helpWith.trim(),
+          },
+        },
       });
+      if (error) throw error;
 
       setIsSubmitted(true);
     } catch {
