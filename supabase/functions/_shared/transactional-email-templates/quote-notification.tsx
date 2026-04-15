@@ -8,6 +8,7 @@ const SITE_NAME = "Nello's Flooring"
 
 interface QuoteNotificationProps {
   fullName?: string
+  email?: string
   phone?: string
   helpWith?: string
 }
