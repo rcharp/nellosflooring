@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 
 
-const WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/GIStSvIcFqux99Wx6sGI/webhook-trigger/70F0FsS8gJ6OHYIpZM0O";
+const FORM_ENDPOINT = "https://formsubmit.co/ajax/rickycharpentier@gmail.com";
 
 interface QuoteFormProps {
   showHeader?: boolean;
