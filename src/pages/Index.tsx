@@ -23,7 +23,7 @@ const Index = () => {
     <div className="min-h-screen bg-background overflow-x-hidden max-w-[100vw]">
       <main>
         <div className="relative">
-          <Header />
+          <Header transparent />
           <HeroSection />
         </div>
         <TrustBadges />
