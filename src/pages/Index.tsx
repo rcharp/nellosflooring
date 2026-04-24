@@ -21,9 +21,11 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background overflow-x-hidden max-w-[100vw]">
-      <Header />
       <main>
-        <HeroSection />
+        <div className="relative">
+          <Header />
+          <HeroSection />
+        </div>
         <TrustBadges />
         <SpecialOffers />
         <TestimonialsSection />
