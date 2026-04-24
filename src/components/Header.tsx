@@ -35,14 +35,24 @@ const navLinks = [
   },
 ];
 
-const Header = () => {
+interface HeaderProps {
+  transparent?: boolean;
+}
+
+const Header = ({ transparent = false }: HeaderProps) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [mobileDropdown, setMobileDropdown] = useState<string | null>(null);
   const { openQuoteModal } = useQuoteModal();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-white max-w-[100vw]">
+    <header
+      className={
+        transparent
+          ? "absolute top-0 left-0 right-0 z-50 max-w-[100vw]"
+          : "sticky top-0 z-50 border-b border-border bg-white max-w-[100vw]"
+      }
+    >
       <div className="container mx-auto flex items-center justify-between py-4 px-4 lg:px-8 max-w-[100vw]">
         {/* Logo */}
         <a href="/" className="flex items-center shrink-0 mr-2 lg:mr-4">
@@ -59,7 +69,7 @@ const Header = () => {
                 onMouseEnter={() => setOpenDropdown(link.label)}
                 onMouseLeave={() => setOpenDropdown(null)}
               >
-                <button className="flex items-center gap-1 px-4 py-2 text-base font-medium text-foreground/70 hover:text-foreground transition-colors rounded-lg">
+                <button className={`flex items-center gap-1 px-4 py-2 text-base font-medium transition-colors rounded-lg ${transparent ? "text-white/90 hover:text-white" : "text-foreground/70 hover:text-foreground"}`}>
                   {link.label}
                   <ChevronDown className="w-3.5 h-3.5" />
                 </button>
@@ -89,7 +99,7 @@ const Header = () => {
               <a
                 key={link.label}
                 href={link.href}
-                className="px-4 py-2 text-base font-medium text-foreground/70 hover:text-foreground transition-colors rounded-lg"
+                className={`px-4 py-2 text-base font-medium transition-colors rounded-lg ${transparent ? "text-white/90 hover:text-white" : "text-foreground/70 hover:text-foreground"}`}
               >
                 {link.label}
               </a>
