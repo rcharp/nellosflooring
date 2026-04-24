@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Phone, Menu, X, ChevronDown, ChevronUp } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useQuoteModal } from "./QuoteModal";
-import logo from "@/assets/nello-logo.jpg";
+import logo from "@/assets/nello-logo.png";
 
 const navLinks = [
   { label: "Home", href: "/" },
