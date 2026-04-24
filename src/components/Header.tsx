@@ -56,7 +56,12 @@ const Header = ({ transparent = false }: HeaderProps) => {
       <div className="container mx-auto flex items-center justify-between py-4 px-4 lg:px-8 max-w-[100vw]">
         {/* Logo */}
         <a href="/" className="flex items-center shrink-0 mr-2 lg:mr-4">
-          <img src={logo} alt="Nello's Flooring" className="w-16 lg:w-auto h-auto" style={{ maxHeight: '150px' }} />
+          <img
+            src={logo}
+            alt="Nello's Flooring"
+            className={`w-16 lg:w-auto h-auto ${transparent ? "mix-blend-screen invert" : ""}`}
+            style={{ maxHeight: '150px' }}
+          />
         </a>
 
         {/* Desktop Nav */}
