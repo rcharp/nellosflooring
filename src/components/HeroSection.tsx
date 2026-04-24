@@ -18,7 +18,7 @@ const HeroSection = () => {
       {/* Black Overlay */}
       <div className="absolute inset-0 bg-black/70" />
 
-      <div className="container mx-auto px-4 lg:px-8 pt-32 lg:pt-44 pb-16 lg:pb-24 relative z-10">
+      <div className="container mx-auto px-4 lg:px-8 pt-32 lg:pt-[376px] pb-16 lg:pb-24 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left Content */}
           <div className="space-y-8 lg:pt-8">
