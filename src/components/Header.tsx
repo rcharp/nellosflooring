@@ -3,7 +3,6 @@ import { Phone, Menu, X, ChevronDown, ChevronUp } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useQuoteModal } from "./QuoteModal";
 import logo from "@/assets/nello-logo.jpg";
-import logoTransparent from "@/assets/nello-logo-transparent.png";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -58,7 +57,7 @@ const Header = ({ transparent = false }: HeaderProps) => {
         {/* Logo */}
         <a href="/" className="flex items-center shrink-0 mr-2 lg:mr-4">
           <img
-            src={transparent ? logoTransparent : logo}
+            src={logo}
             alt="Nello's Flooring"
             className="w-16 lg:w-auto h-auto"
             style={{ maxHeight: '150px' }}
