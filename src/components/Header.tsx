@@ -69,7 +69,7 @@ const Header = ({ transparent = false }: HeaderProps) => {
                 onMouseEnter={() => setOpenDropdown(link.label)}
                 onMouseLeave={() => setOpenDropdown(null)}
               >
-                <button className="flex items-center gap-1 px-4 py-2 text-base font-medium text-foreground/70 hover:text-foreground transition-colors rounded-lg">
+                <button className={`flex items-center gap-1 px-4 py-2 text-base font-medium transition-colors rounded-lg ${transparent ? "text-white/90 hover:text-white" : "text-foreground/70 hover:text-foreground"}`}>
                   {link.label}
                   <ChevronDown className="w-3.5 h-3.5" />
                 </button>
@@ -99,7 +99,7 @@ const Header = ({ transparent = false }: HeaderProps) => {
               <a
                 key={link.label}
                 href={link.href}
-                className="px-4 py-2 text-base font-medium text-foreground/70 hover:text-foreground transition-colors rounded-lg"
+                className={`px-4 py-2 text-base font-medium transition-colors rounded-lg ${transparent ? "text-white/90 hover:text-white" : "text-foreground/70 hover:text-foreground"}`}
               >
                 {link.label}
               </a>
