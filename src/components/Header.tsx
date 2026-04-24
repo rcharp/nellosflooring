@@ -59,8 +59,8 @@ const Header = ({ transparent = false }: HeaderProps) => {
           <img
             src={logo}
             alt="Nello's Flooring"
-            className="w-16 lg:w-auto h-auto"
-            style={{ maxHeight: '150px' }}
+            className="w-24 lg:w-auto h-auto"
+            style={{ maxHeight: '220px' }}
           />
         </a>
 
